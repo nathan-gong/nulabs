@@ -8,8 +8,7 @@ USE nulabs;
 -- Entity Tables
 
 CREATE TABLE college (
-    college_name VARCHAR(16) PRIMARY KEY,
-    building_name varchar(255) not null
+    college_name VARCHAR(16) PRIMARY KEY
 );
 
 CREATE TABLE building (
@@ -23,7 +22,7 @@ CREATE TABLE building (
 
 CREATE TABLE lab (
     lab_name VARCHAR(255) PRIMARY KEY,
-    lab_description VARCHAR(1000) NOT NULL,
+    lab_description VARCHAR(3000) NOT NULL,
     website VARCHAR(1000) NOT NULL,
     recruiting_status TINYINT(1) NOT NULL,
     department VARCHAR(255) NOT NULL,
@@ -47,7 +46,7 @@ CREATE TABLE lab_member (
 
 CREATE TABLE project (
     title VARCHAR(256) PRIMARY KEY,
-    project_description VARCHAR(1000),
+    project_description VARCHAR(3000),
     lab_name VARCHAR(255) NOT NULL,
     FOREIGN KEY (lab_name)
         REFERENCES lab (lab_name)
