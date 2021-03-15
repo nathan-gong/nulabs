@@ -1,7 +1,6 @@
 # Create Schema
 
 -- drop database nulabs;
-
 CREATE DATABASE IF NOT EXISTS nulabs;
 USE nulabs;
 
@@ -54,11 +53,12 @@ CREATE TABLE project (
 );
 
 CREATE TABLE publication (
-    doi VARCHAR(128) PRIMARY KEY,
+    doi VARCHAR(256) PRIMARY KEY,
     title VARCHAR(256) NOT NULL,
     publish_date INT NOT NULL,
     journal VARCHAR(1000) NOT NULL
 );
+SELECT * FROM publication;
 
 CREATE TABLE pi (
     username VARCHAR(255) PRIMARY KEY,
