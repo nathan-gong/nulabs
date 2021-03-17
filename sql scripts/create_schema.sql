@@ -42,7 +42,6 @@ CREATE TABLE lab_member (
         ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-
 CREATE TABLE project (
     title VARCHAR(256) PRIMARY KEY,
     project_description VARCHAR(3000),
@@ -58,7 +57,6 @@ CREATE TABLE publication (
     publish_date INT NOT NULL,
     journal VARCHAR(1000) NOT NULL
 );
-SELECT * FROM publication;
 
 CREATE TABLE pi (
     username VARCHAR(255) PRIMARY KEY,
@@ -98,4 +96,3 @@ CREATE TABLE conducts (
         REFERENCES lab (lab_name)
         ON UPDATE CASCADE ON DELETE RESTRICT
 );
-
