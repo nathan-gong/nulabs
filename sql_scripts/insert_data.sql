@@ -144,7 +144,7 @@ SELECT * FROM lab;
 -- INSERT INTO lab_member values ('C.Wagner', 'Claudia', 'Wagner', 'PhD', 'Auditing Algorithms');
 -- INSERT INTO lab_member values ('M.Strohmaier', 'Markus', 'Strohmaier', 'PhD', 'Auditing Algorithms');
 -- INSERT INTO lab_member values ('D.Garcia', 'David', 'Garcia', 'PhD', 'Auditing Algorithms');
-INSERT INTO lab_member values ('H.Nguyen', 'Huy', 'Nguyen', 'Faculty', 'Algori-- thms and Theory');
+-- INSERT INTO lab_member values ('H.Nguyen', 'Huy', 'Nguyen', 'Faculty', 'Algorithms and Theory');
 -- INSERT INTO lab_member values ('A.Shelat', 'Abhi', 'Shelat', 'Faculty', 'Algorithms and Theory');
 -- INSERT INTO lab_member values ('J.Ullman', 'Jonathan', 'Ullman', 'Faculty', 'Algorithms and Theory');
 -- INSERT INTO lab_member values ('D.Wichs', 'Daniel', 'Wichs', 'Faculty', 'Algorithms and Theory');
