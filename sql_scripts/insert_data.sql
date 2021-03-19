@@ -2,17 +2,22 @@
 
 USE nulabs;
 
-/*
 INSERT INTO college values ('Khoury');
 INSERT INTO college values ('COS');
 INSERT INTO college values ('COE');
 INSERT INTO college values ('DMSB');
 INSERT INTO college values ('Bouve');
 INSERT INTO college values ('CSSH');
-SELECT * FROM college;
-*/
+-- SELECT * FROM college;
 
-/*
+INSERT INTO administrator values ('g.abowd', 'COE');
+INSERT INTO administrator values ('c.brodley', 'Khoury');
+INSERT INTO administrator values ('r.echambadi', 'DMSB');
+INSERT INTO administrator values ('h.sive', 'COS');
+INSERT INTO administrator values ('u.poiger', 'CSSH');
+INSERT INTO administrator values ('c.sceppa', 'Bouve');
+-- SELECT * FROM administrator;
+
 INSERT INTO building values ('177 Huntington', '177 Huntington Avenue', 'Khoury');
 INSERT INTO building values ('West Village H', '440 Huntington Avenue', 'Khoury');
 INSERT INTO building values ('Forsyth Building', '70 Forsyth Street', 'Khoury');
@@ -31,10 +36,8 @@ INSERT INTO building values ('Hayden Hall', '360 Huntington Avenue', 'DMSB');
 INSERT INTO building values ('Behrakis Health Sciences Center', '30 Leon Street', 'Bouve');
 INSERT INTO building values ('Renaissance Park', '1135 Tremont Street', 'CSSH');
 INSERT INTO building values ('Churchill Hall', '380 Huntington Avenue', 'CSSH');
-SELECT * FROM building;
-*/
+-- SELECT * FROM building;
 
-/*
 -- INSERT INTO lab values ('Auditing Algorithms', 'Examines the social consequencies and potential biases of commonplace algorithmic systems.', 'https://personalization.ccs.neu.edu/', '1', 'Computer Science', 'NULL');
 -- INSERT INTO lab values ('Algorithms and Theory ', 'Solves complex computational problems in algorithmic game theory, cryptography and learning theory', 'https://www2.ccs.neu.edu/theory/index.html', '0', 'Computer Science', 'NULL');
 -- INSERT INTO lab values ('Applied Machine Learning Group', 'Focuses on core issues and real-world applications of machine learning ', 'https://carla.khoury.northeastern.edu/applied-machine-learning-group/#_ga=2.163885119.1214471716.1615096785-1696423499.1564006309', '1', 'Computer Science', 'NULL');
@@ -121,11 +124,9 @@ INSERT INTO lab values ('Center on Crime and Community Resilience', 'Based at No
 INSERT INTO lab values ('Global Resilience Institute', 'The Global Resilience Institute is leading a university-wide interdisciplinary effort to advance resilience-related initiatives that contribute to the security, sustainability, health, and well-being of societies.', 'https://globalresilience.northeastern.edu/#_ga=2.123706507.1214471716.1615096785-1696423499.1564006309', '1', 'Global Studies', '177 Huntington');
 INSERT INTO lab values ('Humanities Center', 'Through unique programming and research initiatives, the Humanities Center fosters collaboration and conversation on the significance of history, literature, and culture.', 'https://cssh.northeastern.edu/humanities/', '0', 'History', 'Renaissance Park');
 INSERT INTO lab values ('Social Impact Lab', 'We develop experiential learning models to support our mission of preparing students for lives of purpose as ethical and effective citizen-leaders and social change agents.', 'https://cssh.northeastern.edu/impactlab/', '1', 'Human Services', 'Renaissance Park');
-SELECT * FROM lab;
-*/
+-- SELECT * FROM lab;
 
-/*
--- INSERT INTO lab_member values ('A.Hannak', 'Aniko', 'Hannak', 'PhD-- ', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('A.Hannak', 'Aniko', 'Hannak', 'PhD', 'Auditing Algorithms');
 -- INSERT INTO lab_member values ('P.Sapiezynski', 'Piotr ', 'Sapiezynski', 'PhD', 'Auditing Algorithms');
 -- INSERT INTO lab_member values ('A.Molavi Kakhki', 'Arash', 'Molavi Kakhki', 'PhD', 'Auditing Algorithms');
 -- INSERT INTO lab_member values ('B.Krishnamurthy', 'Balachander', 'Krishnamurthy', 'PhD', 'Auditing Algorithms');
@@ -372,10 +373,8 @@ INSERT INTO lab_member values ('M.Patterson', 'Mark', 'Patterson', 'Faculty', 'G
 INSERT INTO lab_member values ('P.Anderson', 'Phil', 'Anderson', 'Faculty', 'Global Resilience Institute');
 INSERT INTO lab_member values ('A.Valencia', 'Angie', 'Valencia', 'Faculty', 'Global Resilience Institute');
 INSERT INTO lab_member values ('S.Pickens', 'Scott', 'Pickens', 'Faculty', 'Global Resilience Institute');
-SELECT * FROM lab_member;
-*/
+-- SELECT * FROM lab_member;
 
-/*
 -- INSERT INTO project values ('Algorithm Auditing', 'Examines the social consequences and potential biases of commonplace algorithmic systems', 'Algorithm Auditing');
 -- INSERT INTO project values ('Algorithms and Theory ', 'solves complex computational problems in algorithmic game theory, cryptography and learning theory', 'Algorithms and Theory ');
 -- INSERT INTO project values ('Applied Machine Learning Group', 'focuses on core issues and real-world applications of machine learning ', 'Applied Machine Learning Group');
@@ -449,10 +448,8 @@ INSERT INTO project values ('Language Deprivation Syndrome', 'nan', 'Center for 
 INSERT INTO project values ('Integrated Resilience Enhancement Solutions', 'We apply a research-based methodology and set of supporting processes to provide communities and enterprises effective multi-dimensional resilience enhancing initiatives.', 'Global Resilience Institute');
 INSERT INTO project values ('Cyber Resilience', 'GRI is at the forefront of developing the concept of Cyber Resilience and applying the relevant principles in the real world.', 'Global Resilience Institute');
 INSERT INTO project values ('Enterprise Continuity and Recovery Solutions', 'GRI works with organizations of all types to define, refine, and test comprehensive all-hazard Enterprise Continuity and Recovery Plans that minimize impact of disruption and speed up time to operational recovery. Additionally, GRI offers comprehensive Post-Incident Assessment to support building back ìbetter and stronger.î', 'Global Resilience Institute');
-SELECT * FROM project;
-*/
+-- SELECT * FROM project;
 
-/*
 INSERT INTO publication values ('10.1145/2488388.2488435', 'Measuring Personalization of Web Search', 2013, 'Association for Computing Machinery');
 INSERT INTO publication values ('10.1145/2815675.2815714', 'Location, Location, Location: The Impact of Geolocation on Web Search Personalization', 2015, 'Internet Measurement Conference');
 INSERT INTO publication values ('10.1145/2872427.2883016', 'MapWatch: Detecting and Monitoring International Border Personalization on Online Maps', 2016, 'World Wide Web');
@@ -605,10 +602,8 @@ INSERT INTO publication values ('10.1257/aer.p20171127', 'The Gender Pay Gap in 
 INSERT INTO publication values ('10.1257/aer.p20171128', 'Resilience in the Age of Stupid', 2021, 'Community Resilience');
 INSERT INTO publication values ('10.1257/aer.p20171129', 'Will Developers Block Clean Energy Standards?', 2021, 'CommonWealth');
 INSERT INTO publication values ('10.3390/v13020146', 'Biological and Clinical Consequences of Integrin Binding via a Rogue RGD Motif in the SARS CoV-2 Spike Protein', 2021, 'Viruses');
-SELECT * FROM publication;
-*/
+-- SELECT * FROM publication;
 
-/*
 -- INSERT INTO pi values ('A.Hannak', 'Auditing Algorithms');
 -- INSERT INTO pi values ('H.Nguyen', 'Algorithms and Theory ');
 -- INSERT INTO pi values ('K.Bairaktari', 'Applied Machine Learning Group');
@@ -695,10 +690,8 @@ INSERT INTO pi values ('D.Cokely', 'Center for Atypical Language Interpreting');
 INSERT INTO pi values ('s.flynn', 'Global Resilience Institute');
 -- INSERT INTO pi values ('l.lefkovitz', 'Humanities Center');
 -- INSERT INTO pi values ('r.riccio', 'Social Impact Lab');
-SELECT * FROM pi;
-*/
+-- SELECT * FROM pi;
 
-/*
 -- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2488388.2488435');
 -- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2815675.2815714');
 -- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2872427.2883016');
@@ -851,10 +844,8 @@ INSERT INTO results_in values ('Enterprise Continuity and Recovery Solutions', '
 INSERT INTO results_in values ('Enterprise Continuity and Recovery Solutions', '10.1257/aer.p20171128');
 INSERT INTO results_in values ('Cyber Resilience', '10.1257/aer.p20171129');
 INSERT INTO results_in values ('Integrated Resilience Enhancement Solutions', '10.3390/v13020146');
-SELECT * FROM results_in;
-*/
+-- SELECT * FROM results_in;
 
-/*
 -- INSERT INTO conducts values ('A.Hannak', 'Algorithm Auditing', 'Auditing Algorithms');
 -- INSERT INTO conducts values ('P.Sapiezynski', 'Algorithm Auditing', 'Auditing Algorithms');
 -- INSERT INTO conducts values ('A.Molavi Kakhki', 'Algorithm Auditing', 'Auditing Algorithms');
@@ -1106,5 +1097,4 @@ INSERT INTO conducts values ('M.Patterson', 'Enterprise Continuity and Recovery 
 INSERT INTO conducts values ('P.Anderson', 'Integrated Resilience Enhancement Solutions', 'Global Resilience Institute');
 INSERT INTO conducts values ('A.Valencia', 'Cyber Resilience', 'Global Resilience Institute');
 INSERT INTO conducts values ('S.Pickens', 'Enterprise Continuity and Recovery Solutions', 'Global Resilience Institute');
-SELECT * FROM conducts;
-*/
+-- SELECT * FROM conducts;
