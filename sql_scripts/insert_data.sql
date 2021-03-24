@@ -9,7 +9,7 @@ INSERT INTO college values ('COE');
 INSERT INTO college values ('DMSB');
 INSERT INTO college values ('Bouve');
 INSERT INTO college values ('CSSH');
-SELECT * FROM college;
+SELECT * FROM college;    
 
 
 
