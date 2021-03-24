@@ -1,87 +1,28 @@
 ﻿username,lab_name
 A.Hannak,Auditing Algorithms
-H.Nguyen,Algorithms and Theory 
-K.Bairaktari,Applied Machine Learning Group
+H.Nguyen,Algorithms and Theory
+K.Bairaktari,Applied Machine Learning
 A.Barab·si,Center for Complex Network Research
 S.Marsella,Cognitive Embodied Social Agents Research (CESAR) Lab
 C.Riedl,Collaborative Social Systems Lab
-R.Patel,Communication Analysis and Design Laboratory (CADLAB)
+R.Patel,Communication Ana;ysis and Design Laboratory (CADLAB)
 H.Jimison,Consortium on Technology for Proactive Care
-m.borkin,Data Visualization
-r.baeza-yates,Databases (Data Lab)
-p.manolios,Formal Methods Group
-m.seifel-nasr,Game User Interaction and Intelligence (GUII) Lab
-rplatt,Helping Hands Lab
-t.padir,Institute for Experiential Robotics
-amato.c,Lab for Learning and Planning in Robotics
-d.lazer,Lazer Lab
-eelhamai,"Mathematical, Computational and Applied Data Science (MCADS) Lab"
-s.intille,mHealth Research Group
-a.vespignani,Modeling of Biological and Socio-technical Systems (MOBS) Lab
-d.choffnes,Mon(IoT)r Lab
-c.nitarotaru,Network and Distributed Systems Security (NDS2)
-b.guthrie,Northeastern Center for Technology in Support of Self-Management and Health
-dasmith,Northeastern Natural Language Processing (NLP) Research Group
-d.offenhuber,Northeastern University Visualization Consortium (NUVis)
-e.dillon,"NULab for Texts, Maps, and Networks"
-artem,Programming Research Laboratory
-t.bickmore,Relational Agents Group
-p.desnoyers,Solid State Storage Lab
-q.yu,Spatiotemporal Learning group
-o.vitek,Statistical Methods for Studies of Biomolecular Systems
-yunfu,Syngergetic Media Learning (SMILE) Lab
-an.parker,Wellness Technology Lab
-d.sternad,Action Lab
-r.carrier,Advanced Drug Delivery Research Lab
-a.satpute,Affective and Brain Sciences Lab
-m.amiji,Amiji Group
-j.apfeld,Apfeld Lab
-m.niedre,Biomedical Optics Research Group
-je.bowen,Bowen Lab
-a.asthagiri,Cell & Tissue Engineering Lab (CEL)
-v.torchilin,Center for Pharmaceutical Biotechnology and Nanomedicine
-h.clark,Clark Lab
-e.cram,Cram Lab
-h.brenhouse,Developmental Neuropsychobiology Laboratory
-m.dipierro,Di Pierro Lab
-s.scarpino,Emergent Epidemics Lab
-v.godoycarter,Godoy Lab
-s.kar,Kar Lab
-ca.lee,Lee-Parsons Research Laboratory
-k.lewis,Lewis Lab
-t.aliassirad,Network Science Institute
-h.parameswaran,Parameswaran Lab
-g.fiete,Quantum Matter and Correlated Electron Theory Lab
-s.shefelbine,Shefelbine Lab
-z.zhou,SunnyLand
-eskew,Vision Lab
-p.whitford,Whitford Research Group
-d.auguste,Bioresponsive Drug Delivery and Tissue Engineering Lab
-s.bencherif,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+D.Sternad,Action Lab
+R.Carrier,Advanced Drug Delivery Research Laboratory
+A.Satpute,Affective and Brain Sciences Lab
+J.Apfeld,Apfeld Lab
+M.Ondrechen,Ondrechen Lab
+K.Lewis,Lewis Lab
+A.Murphy,Bowen Lab
+J.Bowen,Emergent Epidemics Lab
+M.Di Pierro,Di Pierro Lab
+M.Silevitch,Awareness and Localization of Explosives-Related Threats (ALERT)
+S.Ostadabbas,SPIRAL Labs
+R.Ouyang,MOCA Labs
 K.Chowdhury,Next Generation Networks and Systems Lab (GENESYS)
-R.Ouyang,"Mathematical Optimization modeling, Computation, and Analytics (MOCA) Lab"
-q.fang,Computational Optics and Translational Imaging (COTI) Lab
-l.fernandez,Mask Testing at Northeastern University
-melodia,Wireless Networks and Embedded Systems (WiNES) Laboratory
-rinaldi,Northeastern Sensors & Nano Systems (NS&NS) Laboratory
-s.rouhanifard,Rouhanifard Lab
-n.slavov,Slavov Lab
-d.myers,Business Sustainability Initiative
-r.ramamurti,Center for Emerging Markets
-ma.meyer,Center for Entrepreneurship Education
-ted.clark,Center for Family Business
-ga.young,Center for Health Policy and Healthcare Research
-m.huselid,Center for Workforce Analytics
-y.bart,DATA Initiative
+S.Bencherif,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+D.Auguste,Auguste Lab
+Obrien.d,Boston Area Research Initiative
 d.shaughnessy,Social Enterprise Institute
-a.makriyannis,Center for Drug Discovery
-al.lincoln,Institute for Health Equity and Social Justice Research
-c.ferris,Center for Translational Neuroimaging (CTNI)
-p.brown,Social Science Environmental Health Research Institute
-j.barr,National Education and Research Center for Outcomes Assesment in Healthcare (NERCOA)
-obrien.d,Boston Area Research Initiative
 D.Cokely,Center for Atypical Language Interpreting
-a.braga,Center on Crime and Community Resilience
-s.flynn,Global Resilience Institute
-l.lefkovitz,Humanities Center
-r.riccio,Social Impact Lab
+S.Flynn,Global Resilience Institute
