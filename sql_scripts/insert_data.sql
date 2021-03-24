@@ -2,16 +2,31 @@
 #DROP DATABASE nulabs;
 USE nulabs;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO college values ('Khoury');
 INSERT INTO college values ('COS');
 INSERT INTO college values ('COE');
 INSERT INTO college values ('DMSB');
 INSERT INTO college values ('Bouve');
 INSERT INTO college values ('CSSH');
+<<<<<<< HEAD
 SELECT * FROM college;    
 
 
+=======
+-- SELECT * FROM college;
+
+INSERT INTO administrator values ('g.abowd', 'COE');
+INSERT INTO administrator values ('c.brodley', 'Khoury');
+INSERT INTO administrator values ('r.echambadi', 'DMSB');
+INSERT INTO administrator values ('h.sive', 'COS');
+INSERT INTO administrator values ('u.poiger', 'CSSH');
+INSERT INTO administrator values ('c.sceppa', 'Bouve');
+-- SELECT * FROM administrator;
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 
 INSERT INTO building values ('177 Huntington', '177 Huntington Avenue', 'Khoury');
 INSERT INTO building values ('West Village H', '440 Huntington Avenue', 'Khoury');
@@ -31,10 +46,18 @@ INSERT INTO building values ('Hayden Hall', '360 Huntington Avenue', 'DMSB');
 INSERT INTO building values ('Behrakis Health Sciences Center', '30 Leon Street', 'Bouve');
 INSERT INTO building values ('Renaissance Park', '1135 Tremont Street', 'CSSH');
 INSERT INTO building values ('Churchill Hall', '380 Huntington Avenue', 'CSSH');
+<<<<<<< HEAD
 SELECT * FROM building;
 
 
 
+=======
+-- SELECT * FROM building;
+
+-- INSERT INTO lab values ('Auditing Algorithms', 'Examines the social consequencies and potential biases of commonplace algorithmic systems.', 'https://personalization.ccs.neu.edu/', '1', 'Computer Science', 'NULL');
+-- INSERT INTO lab values ('Algorithms and Theory ', 'Solves complex computational problems in algorithmic game theory, cryptography and learning theory', 'https://www2.ccs.neu.edu/theory/index.html', '0', 'Computer Science', 'NULL');
+-- INSERT INTO lab values ('Applied Machine Learning Group', 'Focuses on core issues and real-world applications of machine learning ', 'https://carla.khoury.northeastern.edu/applied-machine-learning-group/#_ga=2.163885119.1214471716.1615096785-1696423499.1564006309', '1', 'Computer Science', 'NULL');
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO lab values ('Center for Complex Network Research', 'Investigates how networks emerge, what they look like, how they evolve and more. ', 'https://www.barabasilab.com/', '1', 'Computer Science', '177 Huntington');
 INSERT INTO lab values ('Cognitive Embodied Social Agents Research (CESAR) Lab', 'Works on computational modeling of human behavior for study and education and analysis applications', 'https://web.northeastern.edu/cesar/#_ga=2.133601294.1214471716.1615096785-1696423499.1564006309', '1', 'Computer Science', 'West Village H');
 INSERT INTO lab values ('Collaborative Social Systems Lab', 'Explores collaboration in distributed environments using modeling, experiments and data analysis', 'https://www.christophriedl.net/', '1', 'Computer Science', '177 Huntington');
@@ -102,9 +125,82 @@ INSERT INTO lab values ('Center on Crime and Community Resilience', 'Based at No
 INSERT INTO lab values ('Global Resilience Institute', 'The Global Resilience Institute is leading a university-wide interdisciplinary effort to advance resilience-related initiatives that contribute to the security, sustainability, health, and well-being of societies.', 'https://globalresilience.northeastern.edu/#_ga=2.123706507.1214471716.1615096785-1696423499.1564006309', '1', 'Global Studies', '177 Huntington');
 INSERT INTO lab values ('Humanities Center', 'Through unique programming and research initiatives, the Humanities Center fosters collaboration and conversation on the significance of history, literature, and culture.', 'https://cssh.northeastern.edu/humanities/', '0', 'History', 'Renaissance Park');
 INSERT INTO lab values ('Social Impact Lab', 'We develop experiential learning models to support our mission of preparing students for lives of purpose as ethical and effective citizen-leaders and social change agents.', 'https://cssh.northeastern.edu/impactlab/', '1', 'Human Services', 'Renaissance Park');
+<<<<<<< HEAD
 INSERT INTO lab values ('Ondrechen Lab', 'Our work spans the areas of theoretical and computational chemistry, computational biology, bioinformatics, protein design, and drug discovery.', 'http://www.northeastern.edu/org/', '0', 'Biochemistry', 'Mugar Life Sciences Building');
 SELECT * FROM lab;
 
+=======
+-- SELECT * FROM lab;
+
+-- INSERT INTO lab_member values ('A.Hannak', 'Aniko', 'Hannak', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('P.Sapiezynski', 'Piotr ', 'Sapiezynski', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('A.Molavi Kakhki', 'Arash', 'Molavi Kakhki', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('B.Krishnamurthy', 'Balachander', 'Krishnamurthy', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('D.Lazer', 'David', 'Lazer', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('A.Mislove', 'Alan ', 'Mislove', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('C.Wilson', 'Christo', 'Wilson', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('C.Kliman-Silver', 'Chloe', 'Kliman-Silver', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('G.Soeller', 'Gary', 'Soeller', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('K.Karahalios', 'Karrie', 'Karahalios', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('C.Sandvig', 'Christian', 'Sandvig', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('R.Epstein', 'Robert', 'Epstein', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('R.Robertson', 'Ronald ', 'Robertson', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('S.Jiang', 'Shan', 'Jiang', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('K.Joseph', 'Kenneth', 'Joseph', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('L.Friedland', 'Lisa', 'Friedland', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('C.Wagner', 'Claudia', 'Wagner', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('M.Strohmaier', 'Markus', 'Strohmaier', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('D.Garcia', 'David', 'Garcia', 'PhD', 'Auditing Algorithms');
+-- INSERT INTO lab_member values ('H.Nguyen', 'Huy', 'Nguyen', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('A.Shelat', 'Abhi', 'Shelat', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('J.Ullman', 'Jonathan', 'Ullman', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('D.Wichs', 'Daniel', 'Wichs', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('R.Rajaraman', 'Rajmohan', 'Rajaraman', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('R.Sundaram', 'Ravi', 'Sundaram', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('E.Viola', 'Emanuele', 'Viola', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('H.Zhang', 'Hongyang', 'Zhang', 'Faculty', 'Algorithms and Theory');
+-- INSERT INTO lab_member values ('K.Bairaktari', 'Konstantina', 'Bairaktari', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('A.Chaturvedi', 'Anamay', 'Chaturvedi', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('A.Cheu', 'Albert', 'Cheu', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('J.Doerner', 'Jack', 'Doerner', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('A.Hamlin', 'Ariel', 'Hamlin', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('X.Huang', 'Xuangui', 'Huang', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('P.Ivanov', 'Peter', 'Ivanov', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('M.Jones', 'Matthew', 'Jones', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('Y.Kondi', 'Yashvanth', 'Kondi', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('L.Kiffer', 'Lucianna', 'Kiffer', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('E.Lee', 'Eysa', 'Lee', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('M.Liaee', 'Mehraneh', 'Liaee', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('M.Liu', 'Minhao', 'Liu', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('B.Maiti', 'Biswaroop', 'Maiti', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('T.Mehta', 'Tanay', 'Mehta', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('T.Nguyen', 'Thien', 'Nguyen', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('T.Nguyen', 'Thy', 'Nguyen', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('S.Rosefield', 'Schuyler', 'Rosefield', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('D.Saharoy', 'Debjyoti', 'Saharoy', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('V.Singhal', 'Vikrant', 'Singhal', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('D.Stalfa', 'David', 'Stalfa', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('W.Quach', 'Willy', 'Quach', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('A.Varma', 'Akshar', 'Varma', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('L.Zakynthinou', 'Lydia', 'Zakynthinou', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('J.Liu', 'Jingjing', 'Liu', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('C.Brodley ', 'Carla', 'Brodley ', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('B.Healy', 'Brian', 'Healy', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('T.Chitnis', 'Tanuja', 'Chitnis', 'PhD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('A.Priesol', 'Adrian', 'Priesol', 'MD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('M.Cao', 'Mengfei', 'Cao', 'BA', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('R.Lewis', 'Richard ', 'Lewis', 'MD', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('V.Ahmed', 'Vilal', 'Ahmed', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('K.Blackmon', 'Karen', 'Blackmon', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('R.Kuzniecky', 'Ruben', 'Kuzniecky', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('G.Barash', 'Gilad', 'Barash', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('C.Carlson', 'Chad', 'Carlson', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('B.Quinn', 'Brian', 'Quinn', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('W.Doyle', 'Werner', 'Doyle', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('J.French', 'Jacqueline', 'French', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('O.Devinsky', 'Orrin ', 'Devinsky', 'Faculty', 'Applied Machine Learning');
+-- INSERT INTO lab_member values ('T.Thesen', 'Theomas ', 'Thesen', 'Faculty', 'Applied Machine Learning');
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO lab_member values ('A.Gates', 'Alexander', 'Gates', 'Faculty', 'Center for Complex Network Research');
 INSERT INTO lab_member values ('D.Gysi', 'Deisy', 'Gysi', 'Faculty', 'Center for Complex Network Research');
 INSERT INTO lab_member values ('M.Kellis', 'Manolis', 'Kellis', 'Faculty', 'Center for Complex Network Research');
@@ -212,6 +308,7 @@ INSERT INTO lab_member values ('M.Patterson', 'Mark', 'Patterson', 'Faculty', 'G
 INSERT INTO lab_member values ('P.Anderson', 'Phil', 'Anderson', 'Faculty', 'Global Resilience Institute');
 INSERT INTO lab_member values ('A.Valencia', 'Angie', 'Valencia', 'Faculty', 'Global Resilience Institute');
 INSERT INTO lab_member values ('S.Pickens', 'Scott', 'Pickens', 'Faculty', 'Global Resilience Institute');
+<<<<<<< HEAD
 INSERT INTO lab_member values ('M.Ondrechen', 'Mary Jo', 'Ondrechen', 'PhD', 'Ondrechen Lab');
 INSERT INTO lab_member values ('S.Lyengar', 'Suhasini', 'Lyengar', 'PhD', 'Ondrechen Lab');
 INSERT INTO lab_member values ('M.Trumble', 'Max', 'Trumble', 'PhD', 'Ondrechen Lab');
@@ -226,6 +323,13 @@ INSERT INTO lab_member values ('M.Hong', 'Megan', 'Hong', 'Undergraduate', 'Ondr
 INSERT INTO lab_member values ('J.Sundaram', 'Joie', 'Sundaram', 'Undergraduate', 'Ondrechen Lab');
 SELECT * FROM lab_member;
 
+=======
+-- SELECT * FROM lab_member;
+
+-- INSERT INTO project values ('Algorithm Auditing', 'Examines the social consequences and potential biases of commonplace algorithmic systems', 'Algorithm Auditing');
+-- INSERT INTO project values ('Algorithms and Theory ', 'solves complex computational problems in algorithmic game theory, cryptography and learning theory', 'Algorithms and Theory ');
+-- INSERT INTO project values ('Applied Machine Learning Group', 'focuses on core issues and real-world applications of machine learning ', 'Applied Machine Learning Group');
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO project values ('Center for Complex Network Research', 'investigates how networks emerge, what they look like, how they evolve and more. ', 'Center for Complex Network Research');
 INSERT INTO project values ('Cognitive Embodied Social Agents Research (CESAR) Lab', 'Works on computational modeling of human behavior for study and education and analysis applications', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
 INSERT INTO project values ('Collaborative Social Systems Lab', 'Explores collaboration in distributed environments using modeling, experiments and data analysis', 'Collaborative Social Systems Lab');
@@ -280,10 +384,15 @@ INSERT INTO project values ('Language Deprivation Syndrome', 'nan', 'Center for 
 INSERT INTO project values ('Integrated Resilience Enhancement Solutions', 'We apply a research-based methodology and set of supporting processes to provide communities and enterprises effective multi-dimensional resilience enhancing initiatives.', 'Global Resilience Institute');
 INSERT INTO project values ('Cyber Resilience', 'GRI is at the forefront of developing the concept of Cyber Resilience and applying the relevant principles in the real world.', 'Global Resilience Institute');
 INSERT INTO project values ('Enterprise Continuity and Recovery Solutions', 'GRI works with organizations of all types to define, refine, and test comprehensive all-hazard Enterprise Continuity and Recovery Plans that minimize impact of disruption and speed up time to operational recovery. Additionally, GRI offers comprehensive Post-Incident Assessment to support building back ìbetter and stronger.î', 'Global Resilience Institute');
+<<<<<<< HEAD
 SELECT * FROM project;
 
 
 
+=======
+-- SELECT * FROM project;
+
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO publication values ('10.1145/2488388.2488435', 'Measuring Personalization of Web Search', 2013, 'Association for Computing Machinery');
 INSERT INTO publication values ('10.1145/2815675.2815714', 'Location, Location, Location: The Impact of Geolocation on Web Search Personalization', 2015, 'Internet Measurement Conference');
 INSERT INTO publication values ('10.1145/2872427.2883016', 'MapWatch: Detecting and Monitoring International Border Personalization on Online Maps', 2016, 'World Wide Web');
@@ -436,10 +545,19 @@ INSERT INTO publication values ('10.1257/aer.p20171127', 'The Gender Pay Gap in 
 INSERT INTO publication values ('10.1257/aer.p20171128', 'Resilience in the Age of Stupid', 2021, 'Community Resilience');
 INSERT INTO publication values ('10.1257/aer.p20171129', 'Will Developers Block Clean Energy Standards?', 2021, 'CommonWealth');
 INSERT INTO publication values ('10.3390/v13020146', 'Biological and Clinical Consequences of Integrin Binding via a Rogue RGD Motif in the SARS CoV-2 Spike Protein', 2021, 'Viruses');
+<<<<<<< HEAD
 SELECT * FROM publication;
 
 
 INSERT INTO pi values ('A.Barab·si', 'Center for Complex Network Research');
+=======
+-- SELECT * FROM publication;
+
+-- INSERT INTO pi values ('A.Hannak', 'Auditing Algorithms');
+-- INSERT INTO pi values ('H.Nguyen', 'Algorithms and Theory ');
+-- INSERT INTO pi values ('K.Bairaktari', 'Applied Machine Learning Group');
+INSERT INTO pi values ('A.Barabasi', 'Center for Complex Network Research');
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO pi values ('S.Marsella', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
 INSERT INTO pi values ('C.Riedl', 'Collaborative Social Systems Lab');
 INSERT INTO pi values ('H.Jimison', 'Consortium on Technology for Proactive Care');
@@ -454,11 +572,36 @@ INSERT INTO pi values ('K.Chowdhury', 'Next Generation Networks and Systems Lab 
 INSERT INTO pi values ('S.Bencherif', 'Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)');
 INSERT INTO pi values ('d.shaughnessy', 'Social Enterprise Institute');
 INSERT INTO pi values ('D.Cokely', 'Center for Atypical Language Interpreting');
+<<<<<<< HEAD
 INSERT INTO pi values ('S.Flynn', 'Global Resilience Institute');
 INSERT INTO pi values ('M.Ondrechen', 'Ondrechen Lab');
 SELECT * FROM pi;
 
 
+=======
+-- INSERT INTO pi values ('a.braga', 'Center on Crime and Community Resilience');
+INSERT INTO pi values ('s.flynn', 'Global Resilience Institute');
+-- INSERT INTO pi values ('l.lefkovitz', 'Humanities Center');
+-- INSERT INTO pi values ('r.riccio', 'Social Impact Lab');
+-- SELECT * FROM pi;
+
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2488388.2488435');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2815675.2815714');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2872427.2883016');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/3134677');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/3274417');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2998181.2998327');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.18122/B20Q5R');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/3173574.3174225');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2663716.2663744');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2815675.2815681');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2872427.2883089');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/3178876.3186134');
+-- INSERT INTO results_in values ('Algorithm Auditing', '10.1145/2987443.2987469');
+-- INSERT INTO results_in values ('Applied Machine Learning', '10.1016/j.artmed.2015.06.004');
+-- INSERT INTO results_in values ('Applied Machine Learning', '10.1001/jamaoto.2014.3519');
+-- INSERT INTO results_in values ('Applied Machine Learning', '10.1016/j.yebeh.2015.04.055');
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO results_in values ('Center for Complex Network Research', '10.1038/d41586-021-00314-6');
 INSERT INTO results_in values ('Center for Complex Network Research', '10.1038/s41598-020-80091-w');
 INSERT INTO results_in values ('Center for Complex Network Research', '10.1101/2020.05.04.076315');
@@ -564,6 +707,7 @@ INSERT INTO results_in values ('Enterprise Continuity and Recovery Solutions', '
 INSERT INTO results_in values ('Enterprise Continuity and Recovery Solutions', '10.1257/aer.p20171128');
 INSERT INTO results_in values ('Cyber Resilience', '10.1257/aer.p20171129');
 INSERT INTO results_in values ('Integrated Resilience Enhancement Solutions', '10.3390/v13020146');
+<<<<<<< HEAD
 SELECT * FROM results_in;
 
 
@@ -584,6 +728,104 @@ INSERT INTO conducts values ('Z.Fulker', 'Collaborative Social Systems Lab', 'Co
 INSERT INTO conducts values ('V.Lange', 'Collaborative Social Systems Lab', 'Collaborative Social Systems Lab');
 INSERT INTO conducts values ('N.Lore', 'Collaborative Social Systems Lab', 'Collaborative Social Systems Lab');
 INSERT INTO conducts values ('K.Flaherty', 'Collaborative Social Systems Lab', 'Collaborative Social Systems Lab');
+=======
+-- SELECT * FROM results_in;
+
+-- INSERT INTO conducts values ('A.Hannak', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('P.Sapiezynski', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('A.Molavi Kakhki', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('B.Krishnamurthy', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('D.Lazer', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('A.Mislove', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('C.Wilson', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('C.Kliman-Silver', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('G.Soeller', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('K.Karahalios', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('C.Sandvig', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('R.Epstein', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('R.Robertson', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('S.Jiang', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('K.Joseph', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('L.Friedland', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('C.Wagner', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('M.Strohmaier', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('D.Garcia', 'Algorithm Auditing', 'Auditing Algorithms');
+-- INSERT INTO conducts values ('H.Nguyen', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('A.Shelat', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('J.Ullman', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('D.Wichs', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('R.Rajaraman', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('R.Sundaram', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('E.Viola', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('H.Zhang', 'Algorithms and Theory ', 'Algorithms and Theory');
+-- INSERT INTO conducts values ('K.Bairaktari', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('A.Chaturvedi', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('A.Cheu', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('J.Doerner', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('A.Hamlin', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('X.Huang', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('P.Ivanov', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('M.Jones', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('Y.Kondi', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('L.Kiffer', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('E.Lee', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('M.Liaee', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('M.Liu', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('B.Maiti', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('T.Mehta', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('T.Nguyen', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('T.Nguyen', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('S.Rosefield', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('D.Saharoy', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('V.Singhal', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('D.Stalfa', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('W.Quach', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('A.Varma', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('L.Zakynthinou', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('J.Liu', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('C.Brodley ', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('B.Healy', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('T.Chitnis', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('A.Priesol', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('M.Cao', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('R.Lewis', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('V.Ahmed', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('K.Blackmon', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('R.Kuzniecky', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('G.Barash', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('C.Carlson', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('B.Quinn', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('W.Doyle', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('J.French', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('O.Devinsky', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('T.Thesen', 'Applied Machine Learning Group', 'Applied Machine Learning');
+-- INSERT INTO conducts values ('A.Gates', 'Complex Network Research', 'Center for Complex Network Research');
+-- INSERT INTO conducts values ('D.Gysi', 'Complex Network Research', 'Center for Complex Network Research');
+-- INSERT INTO conducts values ('M.Kellis', 'Complex Network Research', 'Center for Complex Network Research');
+-- INSERT INTO conducts values ('A.Barab·si', 'Complex Network Research', 'Center for Complex Network Research');
+-- INSERT INTO conducts values ('S.Marsella', 'Cognitive Embodied Social Agents', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
+-- INSERT INTO conducts values ('P.Sequeira', 'Cognitive Embodied Social Agents', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
+-- INSERT INTO conducts values ('D.Jeong', 'Cognitive Embodied Social Agents', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
+-- INSERT INTO conducts values ('H.Wang', 'Cognitive Embodied Social Agents', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
+-- INSERT INTO conducts values ('D.Feng', 'Cognitive Embodied Social Agents', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
+-- INSERT INTO conducts values ('N.Yongsatianchot', 'Cognitive Embodied Social Agents', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
+-- INSERT INTO conducts values ('P.Parker', 'Cognitive Embodied Social Agents', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
+-- INSERT INTO conducts values ('C.Riedl', 'Collaborative Social Systems', 'Collaborative Social Systems Lab');
+-- INSERT INTO conducts values ('S.Westby', 'Collaborative Social Systems', 'Collaborative Social Systems Lab');
+-- INSERT INTO conducts values ('Z.Fulker', 'Collaborative Social Systems', 'Collaborative Social Systems Lab');
+-- INSERT INTO conducts values ('V.Lange', 'Collaborative Social Systems', 'Collaborative Social Systems Lab');
+-- INSERT INTO conducts values ('N.Lore', 'Collaborative Social Systems', 'Collaborative Social Systems Lab');
+-- INSERT INTO conducts values ('K.Flaherty', 'Collaborative Social Systems', 'Collaborative Social Systems Lab');
+-- INSERT INTO conducts values ('R.Patel', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('K.Connaghan', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('D.Fisk', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('L.Haenchen', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('Z.Kopp', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('L.Kuhlmann', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('M.Pervaiz', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('D.Reily', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+-- INSERT INTO conducts values ('J.Thorson', 'Communication Analysis and Design', 'Communication Analysis and Design Laboratory (CADLAB)');
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1
 INSERT INTO conducts values ('H.Jimison', 'Consortium on Technology for Proactive Care', 'Consortium on Technology for Proactive Care');
 INSERT INTO conducts values ('M.Pavel', 'Consortium on Technology for Proactive Care', 'Consortium on Technology for Proactive Care');
 INSERT INTO conducts values ('X.Li', 'Consortium on Technology for Proactive Care', 'Consortium on Technology for Proactive Care');
@@ -689,5 +931,9 @@ INSERT INTO conducts values ('M.Patterson', 'Enterprise Continuity and Recovery 
 INSERT INTO conducts values ('P.Anderson', 'Integrated Resilience Enhancement Solutions', 'Global Resilience Institute');
 INSERT INTO conducts values ('A.Valencia', 'Cyber Resilience', 'Global Resilience Institute');
 INSERT INTO conducts values ('S.Pickens', 'Enterprise Continuity and Recovery Solutions', 'Global Resilience Institute');
+<<<<<<< HEAD
 SELECT * FROM conducts;
 
+=======
+-- SELECT * FROM conducts;
+>>>>>>> 5c83511296bb7e162ecb97bc906559956e5079d1

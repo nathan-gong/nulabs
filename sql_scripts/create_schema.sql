@@ -10,9 +10,17 @@ CREATE TABLE college (
     college_name VARCHAR(16) PRIMARY KEY
 );
 
+CREATE TABLE administrator (
+    username VARCHAR(255) PRIMARY KEY,
+    college_name VARCHAR(16) NOT NULL,
+    FOREIGN KEY (college_name)
+        REFERENCES college (college_name)
+        ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
 CREATE TABLE building (
     building_name VARCHAR(255) PRIMARY KEY,
-    street VARCHAR(255) NOT NULL,
+    street VARCHAR(255) UNIQUE NOT NULL,
     college_name VARCHAR(16) NOT NULL,
     FOREIGN KEY (college_name)
         REFERENCES college (college_name)
@@ -23,9 +31,9 @@ CREATE TABLE lab (
     lab_name VARCHAR(255) PRIMARY KEY,
     lab_description VARCHAR(3000) NOT NULL,
     website VARCHAR(1000) NOT NULL,
-    recruiting_status TINYINT(1) NOT NULL,
+    recruiting_status TINYINT NOT NULL,
     department VARCHAR(255) NOT NULL,
-    building_name VARCHAR(255),
+    building_name VARCHAR(255) NOT NULL,
     FOREIGN KEY (building_name)
         REFERENCES building (building_name)
         ON UPDATE CASCADE ON DELETE CASCADE
