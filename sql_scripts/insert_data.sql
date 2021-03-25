@@ -2,7 +2,6 @@
 #DROP DATABASE nulabs;
 USE nulabs;
 
-
 INSERT INTO college values ('Khoury');
 INSERT INTO college values ('COS');
 INSERT INTO college values ('COE');
@@ -10,8 +9,6 @@ INSERT INTO college values ('DMSB');
 INSERT INTO college values ('Bouve');
 INSERT INTO college values ('CSSH');
 SELECT * FROM college;    
-
-
 
 INSERT INTO building values ('177 Huntington', '177 Huntington Avenue', 'Khoury');
 INSERT INTO building values ('West Village H', '440 Huntington Avenue', 'Khoury');
@@ -619,7 +616,8 @@ INSERT INTO conducts values ('S.Stumbur', 'Examining how the braing regulates ag
 INSERT INTO conducts values ('N.Patel', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
 INSERT INTO conducts values ('A.Lindberg', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
 INSERT INTO conducts values ('N.Gong', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO lab_member values ('P.Beuning', 'Penny', 'Beuning', 'Professor', 'Ondrechen Lab');
+
+
 INSERT INTO conducts values ('P.Beuning', 'Persisters', 'Lewis Lab');
 INSERT INTO conducts values ('P.Beuning', 'Uncultured Bacteria', 'Lewis Lab');
 INSERT INTO conducts values ('P.Beuning', 'Lyme Disease', 'Lewis Lab');

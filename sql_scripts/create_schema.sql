@@ -1,5 +1,5 @@
 # Create Schema
-
+DROP DATABASE nulabs;
 -- drop database nulabs;
 CREATE DATABASE IF NOT EXISTS nulabs;
 USE nulabs;
@@ -20,7 +20,7 @@ CREATE TABLE administrator (
 
 CREATE TABLE building (
     building_name VARCHAR(255) PRIMARY KEY,
-    street VARCHAR(255) UNIQUE NOT NULL,
+    street VARCHAR(255) NOT NULL,
     college_name VARCHAR(16) NOT NULL,
     FOREIGN KEY (college_name)
         REFERENCES college (college_name)
