@@ -54,6 +54,7 @@ CREATE PROCEDURE pi_lab_info(IN username VARCHAR(255))
 	END $$
 delimiter ;
 
+DROP FUNCTION get_college;
 delimiter $$
 CREATE FUNCTION get_college(username VARCHAR(255))
 	RETURNS VARCHAR(16)
@@ -64,7 +65,9 @@ CREATE FUNCTION get_college(username VARCHAR(255))
 	BEGIN
 	DECLARE pi_building VARCHAR(255);
     DECLARE result VARCHAR(16);
-	SELECT building_name FROM pi p WHERE p.username = username INTO pi_building;
+    DECLARE pi_lab VARCHAR(255);
+	SELECT get_lab(username) INTO pi_lab;
+    SELECT building_name FROM lab l WHERE l.lab_name = pi_lab INTO pi_building;
     SELECT college_name FROM building b WHERE b.college_name = pi_building INTO result;
     RETURN result;
 	END $$
