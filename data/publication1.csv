@@ -1,4 +1,4 @@
-DOI,title,publishDate,journal
+ÔªøDOI,title,publishDate,journal
 10.1145/2488388.2488435,Measuring Personalization of Web Search,2013,Association for Computing Machinery
 10.1145/2815675.2815714,"Location, Location, Location: The Impact of Geolocation on Web Search Personalization",2015,Internet Measurement Conference
 10.1145/2872427.2883016,MapWatch: Detecting and Monitoring International Border Personalization on Online Maps,2016,World Wide Web
@@ -14,16 +14,16 @@ DOI,title,publishDate,journal
 10.1145/2987443.2987469,Recommended For You: A First Look at Content Recommendation Networks,2016,Internet Measurement Conference
 10.1016/j.artmed.2015.06.004,Removing confounding factors via constraint-based clustering: An application to finding homogeneous groups of multiple sclerosis patients,2015,Elsevier
 10.1001/jamaoto.2014.3519,Clinical Vestibular Testing Assessed With Machine-Learning Algorithms,2015,JAMA Network
-10.1016/j.yebeh.2015.04.055,Cortical feature analysis and machine learning improves detection of ìMRI-negativeî focal cortical dysplasia,2015,Elsevier
-10.1038/d41586-021-00314-6,A wealth of discovery built on the Human Genome Project ó by the numbers,2021,Nature
+10.1016/j.yebeh.2015.04.055,Cortical feature analysis and machine learning improves detection of √¨MRI-negative√Æ focal cortical dysplasia,2015,Elsevier
+10.1038/d41586-021-00314-6,A wealth of discovery built on the Human Genome Project √≥ by the numbers,2021,Nature
 10.1038/s41598-020-80091-w,Social network structure and composition in former NFL football players,2021,Scientific Reports
 10.1101/2020.05.04.076315,Uncovering the genetic blueprint of the C. elegans nervous system,2020,PNAS
-10.5555/3091125.3091240,Is it just me?: evaluating attribution of negative feedback as a function of virtual instructorís gender and proxemics,2017,Autonomous Agents & Multiagent Systems 
+10.5555/3091125.3091240,Is it just me?: evaluating attribution of negative feedback as a function of virtual instructor√≠s gender and proxemics,2017,Autonomous Agents & Multiagent Systems 
 10.1109/ACII.2017.8273590,Assessing personality through objective behavioral sensing,2017,IEEE
 10.1007/978-3-319-67401-8_19,Negative feedback in your face: examining the effects of proxemics and gender on learning,2017,Intelligent Virtual Agents
 10.1007/978-3-319-41649-6_23,Integrating model-based prediction and facial expressions in the perception of emotion,2016,International Conference on Artificial General Intelligence
 10.5555/2936924.2937063,"Do as i say, not as i do: challenges in delegating decisions to automated agents",2016,Autonomous Agents & Multiagent Systems 
-10.1109/ACII.2015.7344572,Emotional perception for updating agentsí beliefs,2015,International Conference on Affective Computing and Intelligent Interaction (ACII)
+10.1109/ACII.2015.7344572,Emotional perception for updating agents√≠ beliefs,2015,International Conference on Affective Computing and Intelligent Interaction (ACII)
 10.1109/ACII.2015.7344558,The appraisal equivalence hypothesis: verifying the domain-independence of a computational model of emotion dynamics,2015,International Conference on Affective Computing and Intelligent Interaction (ACII)
 10.5555/2615731.2615857,Gesture generation with low-dimensional embeddings,2014,Autonomous Agents & Multiagent Systems 
 10.1007/978-3-319-09767-1_34,Metaphoric gestures: towards grounded mental spaces,2014,International Conference on Intelligent Virtual Agents Conference
@@ -64,7 +64,7 @@ DOI,title,publishDate,journal
 10.1016/j.brainres.2006.01.005,Integrating automatic and controlled processes into neurocognitive models of social cognition,2006,Elsevier
 11.0302-C002.indd,The Neuroscience of Goal-Directed Behavior,2011,Psychology Press
 10.1093/cercor/bhs408,Distinct Regions of Prefrontal Cortex Are Associated with the Controlled Retrieval and Selection of Social Information,2013,Cerebral Cortex
-10.1016/j.tics.2019.07.003,The Default Mode Networkís Role in Discrete Emotion,2019,Elsevier
+10.1016/j.tics.2019.07.003,The Default Mode Network√≠s Role in Discrete Emotion,2019,Elsevier
 10.1093/scan/nsw121,"The role of language in the experience and perception
 of emotion: a neuroimaging meta-analysis",2016,Social Cognitive and Affective Neuroscience
 10.1371/journal.pcbi.1004066,A Bayesian Model of Category-Specific Emotional Brain Responses,2015,PLOS Computational Biology
@@ -135,18 +135,18 @@ of emotion: a neuroimaging meta-analysis",2016,Social Cognitive and Affective Ne
 10.1007/s11606-020-05761-x,"Effects of Physician Experience, Specialty Training, and Self-Referral on Inappropriate Diagnostic Imaging",2020,National Library of Medicine
 10.1177/1077558718754573,Gender Differences in Hospital CEO Compensation: A National Investigation of Not-for-Profit Hospitals,2018,National Library of Medicine
 10.1097/JHM-D-17-00177,Impact of ACA Medicaid Expansion on Hospital Finance. Journal of Healthcare Management,2019,National Library of Medicine
-10.1177/0081175015576601,Ecometrics in the age of big data: Measuring and assessing ìbroken windowsî using administrative records,2015,Sociological Methodology
+10.1177/0081175015576601,Ecometrics in the age of big data: Measuring and assessing √¨broken windows√Æ using administrative records,2015,Sociological Methodology
 10.1007/s10464-014-9685-8,The other side of the broken window: A methodology that translates building permits into an ecometric of investment by community members,2015,American Journal of Community Psychology
 10.1177/0022427815577835,Public and Private Spheres of Neighborhood Disorder: Assessing Pathways to Violence Using Large-Scale Digital Records,2015,Journal of Research in Crime and Delinquency
 10.1093/jopart/muw046,Uncharted territoriality in coproduction: The motivations for 311 reporting,2016,Science Direct
 10.1016/j.ssresearch.2016.04.009,Using Small Data to Interpret Big Data: 311 Reports as Individual Contributions to Informal Social Control in Urban Neighborhoods,2016,Science Direct
 10.1037/ebs0000063,"311 hotlines, territoriality, and the collaborative maintenance of the urban commons: Examining the intersection of a coproduction policy and evolved human behavior",2016,APA PsychNet
-10.1177/0013916513499585,Custodians and custodianship in urban neighborhoods: A methodology using reports of public issues received by a cityís 311 hotline,2015,Sage Journal
+10.1177/0013916513499585,Custodians and custodianship in urban neighborhoods: A methodology using reports of public issues received by a city√≠s 311 hotline,2015,Sage Journal
 10.1016/j.jenvp.2014.08.003,"Caring about the community, counteracting disorder: 311 reports of public issues as expressions of territoriality",2014,Science Direct
 10.1744292,The development of Nicaraguan Sign Language via the language acquisition process.,1994,Boston University Conference on Language Development
 10.1744291,Linguistic diversity in a Deaf prison population: Implications for due process.,2004,Journal of Deaf Studies and Deaf Education
 10.1744295,Assessing linguistic diversity in deaf criminal suspects,2002,Sign Language Studies
-10.97816428,"White Patriarchy Wonít Solve the Climate Crisis: Antiracist, Feminist Leadership Is What We Need Right Now",2021,Community Resilience
+10.97816428,"White Patriarchy Won√≠t Solve the Climate Crisis: Antiracist, Feminist Leadership Is What We Need Right Now",2021,Community Resilience
 10.1257/aer.p20171126,Gender and the Dynamics of Economics Seminars,2021,Seminar Dynamics Collective
 10.1257/aer.p20171127,The Gender Pay Gap in Medicine: A Systematic Review,2021,Community Resilience
 10.1257/aer.p20171128,Resilience in the Age of Stupid,2021,Community Resilience

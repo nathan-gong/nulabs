@@ -10,6 +10,14 @@ INSERT INTO college values ('Bouve');
 INSERT INTO college values ('CSSH');
 SELECT * FROM college;    
 
+INSERT INTO administrator values ('g.abowd', 'COE');
+INSERT INTO administrator values ('c.brodley', 'Khoury');
+INSERT INTO administrator values ('r.echambadi', 'DMSB');
+INSERT INTO administrator values ('h.sive', 'COS');
+INSERT INTO administrator values ('u.poiger', 'CSSH');
+INSERT INTO administrator values ('c.sceppa', 'Bouve');
+SELECT * FROM administrator;
+
 INSERT INTO building values ('177 Huntington', '177 Huntington Avenue', 'Khoury');
 INSERT INTO building values ('West Village H', '440 Huntington Avenue', 'Khoury');
 INSERT INTO building values ('Forsyth Building', '70 Forsyth Street', 'Khoury');
@@ -279,8 +287,6 @@ INSERT INTO project values ('Cyber Resilience', 'GRI is at the forefront of deve
 INSERT INTO project values ('Enterprise Continuity and Recovery Solutions', 'GRI works with organizations of all types to define, refine, and test comprehensive all-hazard Enterprise Continuity and Recovery Plans that minimize impact of disruption and speed up time to operational recovery. Additionally, GRI offers comprehensive Post-Incident Assessment to support building back ìbetter and stronger.î', 'Global Resilience Institute');
 SELECT * FROM project;
 
-
-
 INSERT INTO publication values ('10.1145/2488388.2488435', 'Measuring Personalization of Web Search', 2013, 'Association for Computing Machinery');
 INSERT INTO publication values ('10.1145/2815675.2815714', 'Location, Location, Location: The Impact of Geolocation on Web Search Personalization', 2015, 'Internet Measurement Conference');
 INSERT INTO publication values ('10.1145/2872427.2883016', 'MapWatch: Detecting and Monitoring International Border Personalization on Online Maps', 2016, 'World Wide Web');
@@ -435,7 +441,6 @@ INSERT INTO publication values ('10.1257/aer.p20171129', 'Will Developers Block 
 INSERT INTO publication values ('10.3390/v13020146', 'Biological and Clinical Consequences of Integrin Binding via a Rogue RGD Motif in the SARS CoV-2 Spike Protein', 2021, 'Viruses');
 SELECT * FROM publication;
 
-
 INSERT INTO pi values ('A.Barab·si', 'Center for Complex Network Research');
 INSERT INTO pi values ('S.Marsella', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
 INSERT INTO pi values ('C.Riedl', 'Collaborative Social Systems Lab');
@@ -454,7 +459,6 @@ INSERT INTO pi values ('D.Cokely', 'Center for Atypical Language Interpreting');
 INSERT INTO pi values ('S.Flynn', 'Global Resilience Institute');
 INSERT INTO pi values ('M.Ondrechen', 'Ondrechen Lab');
 SELECT * FROM pi;
-
 
 INSERT INTO results_in values ('Center for Complex Network Research', '10.1038/d41586-021-00314-6');
 INSERT INTO results_in values ('Center for Complex Network Research', '10.1038/s41598-020-80091-w');
@@ -616,8 +620,6 @@ INSERT INTO conducts values ('S.Stumbur', 'Examining how the braing regulates ag
 INSERT INTO conducts values ('N.Patel', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
 INSERT INTO conducts values ('A.Lindberg', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
 INSERT INTO conducts values ('N.Gong', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-
-
 INSERT INTO conducts values ('P.Beuning', 'Persisters', 'Lewis Lab');
 INSERT INTO conducts values ('P.Beuning', 'Uncultured Bacteria', 'Lewis Lab');
 INSERT INTO conducts values ('P.Beuning', 'Lyme Disease', 'Lewis Lab');
@@ -688,4 +690,3 @@ INSERT INTO conducts values ('P.Anderson', 'Integrated Resilience Enhancement So
 INSERT INTO conducts values ('A.Valencia', 'Cyber Resilience', 'Global Resilience Institute');
 INSERT INTO conducts values ('S.Pickens', 'Enterprise Continuity and Recovery Solutions', 'Global Resilience Institute');
 SELECT * FROM conducts;
-

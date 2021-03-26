@@ -22,18 +22,11 @@ INSERT INTO lab_member values (username, first_name, last_name, degree_level, la
 END $$
 delimiter ;
 
--- LOGIN
+-- PI
 delimiter $$
 CREATE PROCEDURE pi_users()    
 	BEGIN
 	SELECT username FROM pi;
-	END $$
-delimiter ;
-
-delimiter $$
-CREATE PROCEDURE admin_users()    
-	BEGIN
-	SELECT username FROM administrator;
 	END $$
 delimiter ;
 
@@ -60,8 +53,6 @@ CREATE PROCEDURE pi_lab_info(IN username VARCHAR(255))
         SELECT * FROM lab l WHERE l.lab_name = pi_lab;
 	END $$
 delimiter ;
-
-
 
 delimiter $$
 CREATE FUNCTION get_college(username VARCHAR(255))
@@ -180,3 +171,66 @@ DELETE FROM results_in WHERE results_in.title = OLD.title;
 END $$
 delimiter ;
 
+-- ADMIN
+delimiter $$
+CREATE PROCEDURE admin_users()    
+	BEGIN
+	SELECT username FROM administrator;
+	END $$
+delimiter ;
+
+delimiter $$
+CREATE PROCEDURE get_labs(IN username VARCHAR(255))
+	BEGIN
+	DECLARE admin_college VARCHAR(255);
+    
+	SELECT college_name FROM administrator a WHERE a.username = username INTO admin_college;
+	SELECT l.* FROM building b JOIN lab l ON b.building_name = l.building_name WHERE b.college_name = admin_college;
+
+	END $$
+delimiter ;
+
+delimiter $$
+CREATE PROCEDURE get_building_names()
+	BEGIN
+    SELECT building_name from building;
+    END $$
+delimiter ;
+
+delimiter $$
+CREATE PROCEDURE get_admin_building_names(IN username VARCHAR(255))
+	BEGIN
+    DECLARE admin_college VARCHAR(255);
+    
+	SELECT college_name FROM administrator a WHERE a.username = username INTO admin_college;
+    SELECT building_name FROM building b WHERE b.college_name = admin_college;
+    END $$
+delimiter ;
+
+delimiter $$
+CREATE PROCEDURE create_lab(IN lab_name VARCHAR(255), IN lab_description VARCHAR(3000), IN website VARCHAR(1000), 
+IN recruiting_status TINYINT, IN department VARCHAR(255), IN building_name VARCHAR(255))
+	BEGIN
+	INSERT INTO lab VALUES (lab_name, lab_description, website, recruiting_status, department, building_name);
+	END $$
+delimiter ;
+
+delimiter $$
+CREATE PROCEDURE update_lab_building_street(IN building_name VARCHAR(255), IN street VARCHAR(255))
+	BEGIN
+	UPDATE lab_building lb
+    SET lb.street = street 
+    WHERE lb.building_name = building_name;
+	END $$
+delimiter ;
+
+delimiter $$
+CREATE PROCEDURE create_lab_building(IN building_name VARCHAR(255), IN street VARCHAR(255), IN username VARCHAR(255))
+	BEGIN
+    DECLARE admin_college VARCHAR(255);
+	
+    SELECT college_name FROM administrator a WHERE a.username = username INTO admin_college;
+    
+    INSERT INTO lab_building values (building_name, street, college_name);
+	END $$
+delimiter ;

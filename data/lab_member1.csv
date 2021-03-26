@@ -1,0 +1,248 @@
+﻿userName,firstName,lastName,degreeLevel,"PI (yes/no, not a column in mysql)",lab they work in
+A.Hannak,Aniko,Hannak,PhD,yes,Auditing Algorithms
+P.Sapiezynski,Piotr ,Sapiezynski,PhD,no,Auditing Algorithms
+A.Molavi Kakhki,Arash,Molavi Kakhki,PhD,no,Auditing Algorithms
+B.Krishnamurthy,Balachander,Krishnamurthy,PhD,no,Auditing Algorithms
+D.Lazer,David,Lazer,PhD,no,Auditing Algorithms
+A.Mislove,Alan ,Mislove,PhD,no,Auditing Algorithms
+C.Wilson,Christo,Wilson,PhD,no,Auditing Algorithms
+C.Kliman-Silver,Chloe,Kliman-Silver,PhD,no,Auditing Algorithms
+G.Soeller,Gary,Soeller,PhD,no,Auditing Algorithms
+K.Karahalios,Karrie,Karahalios,PhD,no,Auditing Algorithms
+C.Sandvig,Christian,Sandvig,PhD,no,Auditing Algorithms
+R.Epstein,Robert,Epstein,PhD,no,Auditing Algorithms
+R.Robertson,Ronald ,Robertson,PhD,no,Auditing Algorithms
+S.Jiang,Shan,Jiang,PhD,no,Auditing Algorithms
+K.Joseph,Kenneth,Joseph,PhD,no,Auditing Algorithms
+L.Friedland,Lisa,Friedland,PhD,no,Auditing Algorithms
+C.Wagner,Claudia,Wagner,PhD,no,Auditing Algorithms
+M.Strohmaier,Markus,Strohmaier,PhD,no,Auditing Algorithms
+D.Garcia,David,Garcia,PhD,no,Auditing Algorithms
+H.Nguyen,Huy,Nguyen,Faculty,yes,Algorithms and Theory
+A.Shelat,Abhi,Shelat,Faculty,no,Algorithms and Theory
+J.Ullman,Jonathan,Ullman,Faculty,no,Algorithms and Theory
+D.Wichs,Daniel,Wichs,Faculty,no,Algorithms and Theory
+R.Rajaraman,Rajmohan,Rajaraman,Faculty,no,Algorithms and Theory
+R.Sundaram,Ravi,Sundaram,Faculty,no,Algorithms and Theory
+E.Viola,Emanuele,Viola,Faculty,no,Algorithms and Theory
+H.Zhang,Hongyang,Zhang,Faculty,no,Algorithms and Theory
+K.Bairaktari,Konstantina,Bairaktari,PhD,yes,Applied Machine Learning
+A.Chaturvedi,Anamay,Chaturvedi,PhD,no,Applied Machine Learning
+A.Cheu,Albert,Cheu,PhD,no,Applied Machine Learning
+J.Doerner,Jack,Doerner,PhD,no,Applied Machine Learning
+A.Hamlin,Ariel,Hamlin,PhD,no,Applied Machine Learning
+X.Huang,Xuangui,Huang,PhD,no,Applied Machine Learning
+P.Ivanov,Peter,Ivanov,PhD,no,Applied Machine Learning
+M.Jones,Matthew,Jones,PhD,no,Applied Machine Learning
+Y.Kondi,Yashvanth,Kondi,PhD,no,Applied Machine Learning
+L.Kiffer,Lucianna,Kiffer,PhD,no,Applied Machine Learning
+E.Lee,Eysa,Lee,PhD,no,Applied Machine Learning
+M.Liaee,Mehraneh,Liaee,PhD,no,Applied Machine Learning
+M.Liu,Minhao,Liu,PhD,no,Applied Machine Learning
+B.Maiti,Biswaroop,Maiti,PhD,no,Applied Machine Learning
+T.Mehta,Tanay,Mehta,PhD,no,Applied Machine Learning
+T.Nguyen,Thien,Nguyen,PhD,no,Applied Machine Learning
+T.Nguyen,Thy,Nguyen,PhD,no,Applied Machine Learning
+S.Rosefield,Schuyler,Rosefield,PhD,no,Applied Machine Learning
+D.Saharoy,Debjyoti,Saharoy,PhD,no,Applied Machine Learning
+V.Singhal,Vikrant,Singhal,PhD,no,Applied Machine Learning
+D.Stalfa,David,Stalfa,PhD,no,Applied Machine Learning
+W.Quach,Willy,Quach,PhD,no,Applied Machine Learning
+A.Varma,Akshar,Varma,PhD,no,Applied Machine Learning
+L.Zakynthinou,Lydia,Zakynthinou,PhD,no,Applied Machine Learning
+J.Liu,Jingjing,Liu,PhD,no,Applied Machine Learning
+C.Brodley ,Carla,Brodley ,PhD,no,Applied Machine Learning
+B.Healy,Brian,Healy,PhD,no,Applied Machine Learning
+T.Chitnis,Tanuja,Chitnis,PhD,no,Applied Machine Learning
+A.Priesol,Adrian,Priesol,MD,no,Applied Machine Learning
+M.Cao,Mengfei,Cao,BA,no,Applied Machine Learning
+R.Lewis,Richard ,Lewis,MD,no,Applied Machine Learning
+V.Ahmed,Vilal,Ahmed,Faculty,no,Applied Machine Learning
+K.Blackmon,Karen,Blackmon,Faculty,no,Applied Machine Learning
+R.Kuzniecky,Ruben,Kuzniecky,Faculty,no,Applied Machine Learning
+G.Barash,Gilad,Barash,Faculty,no,Applied Machine Learning
+C.Carlson,Chad,Carlson,Faculty,no,Applied Machine Learning
+B.Quinn,Brian,Quinn,Faculty,no,Applied Machine Learning
+W.Doyle,Werner,Doyle,Faculty,no,Applied Machine Learning
+J.French,Jacqueline,French,Faculty,no,Applied Machine Learning
+O.Devinsky,Orrin ,Devinsky,Faculty,no,Applied Machine Learning
+T.Thesen,Theomas ,Thesen,Faculty,no,Applied Machine Learning
+A.Gates,Alexander,Gates,Faculty,no,Center for Complex Network Research
+D.Gysi,Deisy,Gysi,Faculty,no,Center for Complex Network Research
+M.Kellis,Manolis,Kellis,Faculty,no,Center for Complex Network Research
+A.Barab·si,Albert-L·szlÛ,Barab·si,Faculty,yes,Center for Complex Network Research
+S.Marsella,Stacy,Marsella,Director,yes,Cognitive Embodied Social Agents Research (CESAR) Lab
+P.Sequeira,Pedro,Sequeira,Faculty,no,Cognitive Embodied Social Agents Research (CESAR) Lab
+D.Jeong,David,Jeong,Faculty,no,Cognitive Embodied Social Agents Research (CESAR) Lab
+H.Wang,Hui,Wang,Faculty,no,Cognitive Embodied Social Agents Research (CESAR) Lab
+D.Feng,Daniel,Feng,Faculty,no,Cognitive Embodied Social Agents Research (CESAR) Lab
+N.Yongsatianchot,Nutchanon,Yongsatianchot,Faculty,no,Cognitive Embodied Social Agents Research (CESAR) Lab
+P.Parker,Phillip,Parker,Faculty,no,Cognitive Embodied Social Agents Research (CESAR) Lab
+C.Riedl,Christoph,Riedl,Faculty,yes,Collaborative Social Systems Lab
+S.Westby,Samuel,Westby,PhD,no,Collaborative Social Systems Lab
+Z.Fulker,Zach,Fulker,PhD,no,Collaborative Social Systems Lab
+V.Lange,V,Lange,PhD,no,Collaborative Social Systems Lab
+N.Lore,Nunzio,Lore,PhD,no,Collaborative Social Systems Lab
+K.Flaherty,Kristin,Flaherty,Postdoc,no,Collaborative Social Systems Lab
+R.Patel,Rupal,Patel,Postdoc,yes,Communication Ana;ysis and Design Laboratory (CADLAB)
+K.Connaghan,Kathryn,Connaghan,Postdoc,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+D.Fisk,Dayna,Fisk,MS,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+L.Haenchen,Laura,Haenchen,BC,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+Z.Kopp,Zachary,Kopp,MS,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+L.Kuhlmann,Leah,Kuhlmann,MS,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+M.Pervaiz,Mansoor,Pervaiz,PhD,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+D.Reily,Daniel,Reily,MS,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+J.Thorson,Jill,Thorson,Postdoc,no,Communication Ana;ysis and Design Laboratory (CADLAB)
+H.Jimison,Holly,Jimison,PhD,yes,Consortium on Technology for Proactive Care
+M.Pavel,Michael,Pavel,PhD,no,Consortium on Technology for Proactive Care
+X.Li,Xuangui,Li,PhD,no,Consortium on Technology for Proactive Care
+M.Kos,Maciej,Kos,PhD,no,Consortium on Technology for Proactive Care
+D.Sternad,Dagmar,Sternad,PhD,yes,Action Lab
+S.Bazzi,Salah,Bazzi,PhD,no,Action Lab
+M.Sadeghi,Mohsen,Sadeghi,PhD,no,Action Lab
+M.Russo,Marta,Russo,Postdoc,no,Action Lab
+A.Krotov,Aleksei,Krotov,Masters,no,Action Lab
+B.Gossart,Ben,Gossart,Undergraduate,no,Action Lab
+S.Bond,Sabrina,Bond,Undergraduate,no,Action Lab
+A.Nugent,Abigail,Nugent,Undergraduate,no,Action Lab
+R.Carrier,Rebecca,Carrier,PhD,yes,Advanced Drug Delivery Research Laboratory
+J.Kundu,Joydip,Kundu,Postodc,no,Advanced Drug Delivery Research Laboratory
+T.Carlson,Taylor,Carlson,PhD,no,Advanced Drug Delivery Research Laboratory
+M.Kamath,Megha,Kamath,PhD,no,Advanced Drug Delivery Research Laboratory
+J.Lock,Jacyln,Lock,PhD,no,Advanced Drug Delivery Research Laboratory
+O.Rezhdo,Oljora,Rezhdo,PhD,no,Advanced Drug Delivery Research Laboratory
+L.Speciner,Lauren,Speciner,PhD,no,Advanced Drug Delivery Research Laboratory
+E.Cady,Eily,Cady,Undergraduate,no,Advanced Drug Delivery Research Laboratory
+J.Harris,Jordan,Harris,Undergraduate,no,Advanced Drug Delivery Research Laboratory
+K.Halligan,Kieran,Halligan,Undergraduate,no,Advanced Drug Delivery Research Laboratory
+A.Satpute,Ajay,Satpute,PhD,yes,Affective and Brain Sciences Lab
+K.Lee,Kent,Lee,Postdoc,no,Affective and Brain Sciences Lab
+S.Fiedler,Stephanie,Fiedler,BA,no,Affective and Brain Sciences Lab
+Y.Wang,Yiju,Wang,Graduate,no,Affective and Brain Sciences Lab
+A.Iancarelli,Alessia,Iancarelli,Graduate,no,Affective and Brain Sciences Lab
+K.McVeigh,Kieran,McVeigh,Graduate,no,Affective and Brain Sciences Lab
+E.Diederich,Ellie,Diederich,Undergraduate,no,Affective and Brain Sciences Lab
+I.Korogodsky,Ilana,Korogodsky,Undergraduate,no,Affective and Brain Sciences Lab
+N.Chaudhary,Nihal,Chaudhary,Undergraduate,no,Affective and Brain Sciences Lab
+L.Christenson,Lauren,Christenson,Undergraduate,no,Affective and Brain Sciences Lab
+J.Apfeld,Javier,Apfeld,PhD,yes,Apfeld Lab
+J.Norris,Jodie,Norris,Graduate,no,Apfeld Lab
+F.Servello,Frank,Servello,Graduate,no,Apfeld Lab
+Y.Xu,Yuyan,Xu,Graduate,no,Apfeld Lab
+S.Stumbur,Stephanie,Stumbur,Undergraduate,no,Apfeld Lab
+N.Patel,Niket,Patel,Undergraduate,no,Apfeld Lab
+A.Lindberg,Anders,Lindberg,Undergraduate,no,Apfeld Lab
+N.Gong,Nathan,Gong,Undergraduate,no,Apfeld Lab
+M.Ondrechen,Mary Jo,Ondrechen,PhD,yes,Ondrechen Lab
+L.Ruffner,Lydia,Ruffner,PhD,no,Ondrechen Lab
+S.Watson,Samantha,Watson,PhD,no,Ondrechen Lab
+S.Lyengar,Suhasini,Lyengar,PhD,no,Ondrechen Lab
+M.Trumble,Max,Trumble,PhD,no,Ondrechen Lab
+L.Kankanamge,Lakindu Pathira,Kankanamge,PhD,no,Ondrechen Lab
+K.Barnsley,Kelton,Barnsley,PhD,no,Ondrechen Lab
+E.Micheloni,Emily,Micheloni,PhD,no,Ondrechen Lab
+J.Agar,Jeff,Agar,Professor,no,Ondrechen Lab
+P.Beuning,Penny,Beuning,Professor,no,Ondrechen Lab
+D.Erdogmus,Deniz,Erdogmus,Professor,no,Ondrechen Lab
+J.Ko,Jaeju,Ko,Professor,no,Ondrechen Lab
+D.Hilvert,Don,Hilvert,Professor,no,Ondrechen Lab
+D.Amador,Dahila,Amador,Undergraduate,no,Ondrechen Lab
+M.Hong,Megan,Hong,Undergraduate,no,Ondrechen Lab
+J.Sundaram,Joie,Sundaram,Undergraduate,no,Ondrechen Lab
+Y.Vu,Yen,Vu,Undergraduate,no,Ondrechen Lab
+K.Lewis,Kim,Lewis,PhD,yes,Lewis Lab
+L.Ruffner,Lydia,Ruffner,Graduate,no,Lewis Lab
+H.Stern,Hannah,Stern,Graduate,no,Lewis Lab
+J.McIsaac,Jim,McIsaac,Graduate,no,Lewis Lab
+S.Watson,Samantha,Watson,Graduate,no,Lewis Lab
+S.Fields,Sarah ,Fields,Graduate,no,Lewis Lab
+R.Dilworth,Ryan,Dilworth,Graduate,no,Lewis Lab
+L.Kankanamge,Lakindu Pathira,Kankanamge,Graduate,no,Lewis Lab
+E.Micheloni,Emily,Micheloni,Graduate,no,Lewis Lab
+A.Murphy,Annie,Murphy,Postdoc,yes,Bowen Lab
+J.L'Heureux,Johanna,L'Heureux,PhD,no,Bowen Lab
+H.Sullivan,Hillary,Sullivan,PhD,no,Bowen Lab
+A.Martinez,Anrea Unzueta,Martinez,PhD,no,Bowen Lab
+J.Vinels,Joe,Vinels,PhD,no,Bowen Lab
+K.McNally,Kerry,McNally,PhD,no,Bowen Lab
+B.Donnelly,Brian,Donnelly,PhD,no,Bowen Lab
+J.Bowen,Jennifer,Bowen,PhD,yes,Emergent Epidemics Lab
+T.Hadzic,Tamara,Hadzic,Undergraduate,no,Emergent Epidemics Lab
+D.Joseph,Daisha,Joseph,Undergraduate,no,Emergent Epidemics Lab
+C.Yang,Chai-Huang,Yang,PhD,no,Emergent Epidemics Lab
+W.Healy,Wan,Healy,PhD,no,Emergent Epidemics Lab
+M.Zahedi,Mohammad Mehdi,Zahedi,PhD,no,Emergent Epidemics Lab
+M.Shrestha,Munik,Shrestha,Postdoc,no,Emergent Epidemics Lab
+M.Di Pierro,Michele,Di Pierro,Professor,yes,Di Pierro Lab
+M.Silevitch,Michael,Silevitch,Faculty,yes,Awareness and Localization of Explosives-Related Threats (ALERT)
+S.Beaudoin,Stephen,Beaudoin,Faculty,no,Awareness and Localization of Explosives-Related Threats (ALERT)
+O.Gregory,Otto,Gregory,Faculty,no,Awareness and Localization of Explosives-Related Threats (ALERT)
+S.Howard,Scott,Howard,Faculty,no,Awareness and Localization of Explosives-Related Threats (ALERT)
+A.Hoffman,Anthony,Hoffman,Faculty,no,Awareness and Localization of Explosives-Related Threats (ALERT)
+M.Rinaldi,Matteo,Rinaldi,Faculty,no,Awareness and Localization of Explosives-Related Threats (ALERT)
+M.Wanke,Michael,Wanke,Faculty,no,Awareness and Localization of Explosives-Related Threats (ALERT)
+S.Ostadabbas,Sarah ,Ostadabbas,Professor,yes,SPIRAL Labs
+S.Ioannidis,Stratis,Ioannidis,Professor,no,SPIRAL Labs
+D.Brooks,Dana,Brooks,Professor,no,SPIRAL Labs
+P.Closas,Pau,Closas,Professor,no,SPIRAL Labs
+J.Dy,Jennifer,Dy,Professor,no,SPIRAL Labs
+D.Erdogmus,Deniz,Erdogmus,Professor,no,SPIRAL Labs
+S.Ruf,Sebastian,Ruf,Postdoc,no,SPIRAL Labs
+S.Ghimire,Sandesh,Ghimire,Postdoc,no,SPIRAL Labs
+g.Stratis,georgios,Stratis,Postdoc,no,SPIRAL Labs
+A.Guo,Aisheng,Guo,PhD,no,SPIRAL Labs
+A.Farnoosh,Amirreza,Farnoosh,PhD,no,SPIRAL Labs
+A.Demir,Andac,Demir,PhD,no,SPIRAL Labs
+A.Singhal,Ashutosh,Singhal,MS,no,SPIRAL Labs
+E.Ojuba,Emmanuel,Ojuba,MS,no,SPIRAL Labs
+R.Ouyang,Ruilin,Ouyang,PhD,yes,MOCA Labs
+S.Qian,Shaodi,Qian,PhD,no,MOCA Labs
+Y.Yin,Yilin,Yin,PhD,no,MOCA Labs
+H.Huang,Huiyu,Huang,PhD,no,MOCA Labs
+H.Gu,Haidong,Gu,PhD,no,MOCA Labs
+J.Liu,Jing,Liu,MS,no,MOCA Labs
+X.Wang,Xiaofan,Wang,MS,no,MOCA Labs
+K.Chowdhury,Kaushik,Chowdhury,Faculty,yes,Next Generation Networks and Systems Lab (GENESYS)
+D.Roy,Debashri,Roy,Postdoc,no,Next Generation Networks and Systems Lab (GENESYS)
+Y.Naderi,Yousof,Naderi,Faculty,no,Next Generation Networks and Systems Lab (GENESYS)
+K.Alemdar,K¸bra,Alemdar,PhD,no,Next Generation Networks and Systems Lab (GENESYS)
+C.Bocanegra,Carlos,Bocanegra,PhD,no,Next Generation Networks and Systems Lab (GENESYS)
+B.Salehi,Batool,Salehi,PhD,no,Next Generation Networks and Systems Lab (GENESYS)
+S.Bencherif,Sidi ,Bencherif,Faculty,yes,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+L.Eggermont,Loek,Eggermont,Postdoc,no,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+T.Colombani,Thibault,Colombani,Postdoc,no,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+M.Zeevi,Michael,Zeevi,PhD,no,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+K.Batt,Khushbu,Batt,PhD,no,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+Z.Rogers,Zachary,Rogers,PhD,no,Laboratory for Advanced and Multiscale Polymeric Biomaterials (LAMP)
+D.Auguste,Debra,Auguste,Faculty,yes,Auguste Lab
+P.Guo,Peng,Guo,Graduate,no,Auguste Lab
+D.Large,Danielle,Large,Graduate,no,Auguste Lab
+J.Hebert,Jacob,Hebert,Graduate,no,Auguste Lab
+"	.Wang","	Yuhang",Wang,Graduate,no,Auguste Lab
+Y.Wen,Yueyan,Wen,Graduate,no,Auguste Lab
+M.Zhuo,Mengqi,Zhuo,Graduate,no,Auguste Lab
+Obrien.d,Dan,O'Brien,Faculty,yes,Boston Area Research Initiative
+Y.Bart,Yakov,Bart,Faculty,no,DATA Initiative
+K.Chan,Kwong,Chan,Faculty,no,DATA Initiative
+P.Ciuccarelli,Paolo,Ciuccarelli,Faculty,no,DATA Initiative
+D.Cohen,Dan,Cohen,Faculty,no,DATA Initiative
+M.Eckelman,Matthew,Eckelman,Faculty,no,DATA Initiative
+K.Pauwels,Koen,Pauwels,Faculty,no,DATA Initiative
+d.shaughnessy,Dennis,Shaughnessy,Faculty,yes,Social Enterprise Institute
+dittrich.a,Alexandra,Dittrich,BS,no,Social Enterprise Institute
+grun.a,Alex,Grun,BS,no,Social Enterprise Institute
+agoglia.a,Ally,Agoglia,BS,no,Social Enterprise Institute
+szaniawski.k,Kelly,Szaniawski,BS,no,Social Enterprise Institute
+fall.c,Charlotte,Fall,BS,no,Social Enterprise Institute
+D.Cokely,Dennis,Cokely,PhD,yes,Center for Atypical Language Interpreting
+D.Doucette,Diana,Doucette,PhD,no,Center for Atypical Language Interpreting
+E.Kramer,Erica,Kramer,PhD,no,Center for Atypical Language Interpreting
+S.Flynn,Stephen,Flynn,Faculty,yes,Global Resilience Institute
+M.Bernstein,Mel,Bernstein,Faculty,no,Global Resilience Institute
+J.Stephens,Jennie,Stephens,Faculty,no,Global Resilience Institute
+R.White,Robin,White,Faculty,no,Global Resilience Institute
+W.Edwards,Warren,Edwards,Faculty,no,Global Resilience Institute
+M.Patterson,Mark,Patterson,Faculty,no,Global Resilience Institute
+P.Anderson,Phil,Anderson,Faculty,no,Global Resilience Institute
+A.Valencia,Angie,Valencia,Faculty,no,Global Resilience Institute
+S.Pickens,Scott,Pickens,Faculty,no,Global Resilience Institute
