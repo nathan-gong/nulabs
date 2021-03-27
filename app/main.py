@@ -1,4 +1,3 @@
-import pymysql
 '''
 from tkinter import *
 
@@ -73,15 +72,13 @@ greenBtn.grid(row=0, column=2, padx=10, pady=2)
 root.mainloop()
 '''
 
-from tkinter import *
-
-#userName = input("Enter username: ")
-#password = input("Enter password: ")
+import pymysql
+from functions import *
 
 try:
     cnx = pymysql.connect(host='localhost', user="root",
                           password="Emmyc2001",
-                      db='nulabs', charset='utf8mb4',
+                          db='nulabs', charset='utf8mb4',
                           cursorclass=pymysql.cursors.DictCursor)
 
 except pymysql.err.OperationalError as e:
@@ -90,73 +87,19 @@ except pymysql.err.OperationalError as e:
     else:
         print('Error: %d: %s' % (e.args[0], e.args[1]))
 
+
 try:
     cur = cnx.cursor()
-    root = Tk()
-    def get_all_labs():
+    
+    print(student_get_all_labs(cur, 10))
 
-
-
-
-        stmt_select = "select * from lab LIMIT 10"
-        cur.execute(stmt_select)
-        rows = cur.fetchall()
-
-        lab_name = 'name'
-        description = 'description'
-        website = 'website'
-        recruiting = 'recruiting?'
-        department = 'department'
-        building = 'building'
-
-        T = Text(root, height=200, width=200)
-        T.pack()
-
-        col_header = "{:<50} \t {:<50} \t {:<30} \t {:<10} \t {:<30} \t {:<10} \t".format(lab_name, description, website, recruiting, department, building)
-        line = "_" * 269
-        # w = Label(root, text=col_header)
-        # w.pack()
-        # r = Label(root, text=line)
-        # r.pack()
-        T.insert(END, col_header)
-        # frame1 = Frame(root, width=200, height=600)
-        # frame1.grid(row=0, column=0, padx=10, pady=2)
-        # Label(frame1, text=lab_name).grid(row=0, column=0, padx=10, pady=2)
-
-        for row in rows:
-            info = "{:<50} \t {:<50} \t {:<30} \t {:<10} \t {:<30} \t {:<10} \t".format(row["lab_name"][:40], row["lab_description"][:50], row["website"][8:38],
-                                                                   ("YES" if row["recruiting_status"] == 1 else "NO"), row["department"], row["building_name"])
-            c = Label(root, text=info, anchor="e", justify=LEFT)
-            c.pack()
-    get_all_labs()
-    root.mainloop()
-
-    # cur.execute(stmt_select)
-    #
-    # rows = cur.fetchall()
-    #
-    # for row in rows:
-    #     #reference field by name
-    #     c_name_var = row["character_name"]
-    #     characters.append(c_name_var)
-    #     # get specific values
-    # cur.close()
-    # #print(characters)
-    #
-    #
-    # def format_table():
-    #     col1= 'cname'
-    #     col2= 'region_name'
-    #     col3='title'
-    #     col4='ename'
-    #     print("{:<10} \t {:<10} \t {:<30} \t {:<10} \t".format(col1, col2, col3, col4))
-    #     print("________________________________________________________________________")
-    #     for c in cursor.fetchall():
-    #         print("{:<10} \t {:<10} \t {:<30} \t {:<10} \t".format(c[col1], c[col2], c[col3], c[col4]))
-    #
-    # format_table()
 except pymysql.Error as e:
     print('Error: %d: %s' % (e.args[0], e.args[1]))
 
 finally:
     cnx.close()
+
+
+
+
+
