@@ -2,6 +2,7 @@
 Python functions used to access MySQL DB programming objects
 """
 
+
 ##########
 # Helpers
 ##########
@@ -71,6 +72,7 @@ def check_building_in_admin_college(cur, building_name, username) -> bool:
     rows = cur.fetchall()
     admin_building_names = [row["building_name"].lower() for row in rows]
     return building_name in admin_building_names
+
 
 ##########
 # Student
