@@ -589,8 +589,6 @@ INSERT INTO conducts values ('H.Jimison', 'Consortium on Technology for Proactiv
 INSERT INTO conducts values ('M.Pavel', 'Consortium on Technology for Proactive Care', 'Consortium on Technology for Proactive Care');
 INSERT INTO conducts values ('X.Li', 'Consortium on Technology for Proactive Care', 'Consortium on Technology for Proactive Care');
 INSERT INTO conducts values ('M.Kos', 'Consortium on Technology for Proactive Care', 'Consortium on Technology for Proactive Care');
-
-SELECT * FROM project WHERE lab_name='Action Lab';
 INSERT INTO conducts values ('D.Sternad', 'From Action to Interaction; Complex Object Manipulation:', 'Action Lab');
 INSERT INTO conducts values ('D.Sternad', 'Assessment of Stability in Complex Human Movements:', 'Action Lab');
 INSERT INTO conducts values ('D.Sternad', 'The MAGIC Table: A Motion-Analysis Device for Upper-Limb Research:', 'Action Lab');

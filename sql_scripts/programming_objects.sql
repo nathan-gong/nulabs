@@ -221,9 +221,9 @@ delimiter ;
 delimiter $$
 CREATE PROCEDURE update_lab_building_street(IN building_name VARCHAR(255), IN street VARCHAR(255))
 	BEGIN
-	UPDATE lab_building lb
-    SET lb.street = street 
-    WHERE lb.building_name = building_name;
+	UPDATE building b
+    SET b.street = street 
+    WHERE b.building_name = building_name;
 	END $$
 delimiter ;
 
@@ -234,6 +234,6 @@ CREATE PROCEDURE create_lab_building(IN building_name VARCHAR(255), IN street VA
 	
     SELECT college_name FROM administrator a WHERE a.username = username INTO admin_college;
     
-    INSERT INTO lab_building values (building_name, street, college_name);
+    INSERT INTO building values (building_name, street, college_name);
 	END $$
 delimiter ;
