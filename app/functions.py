@@ -48,7 +48,7 @@ def student_get_all_labs(cur, lab_number_limit) -> str:
     result = format_result_set(rows)
     return result
 
-def student_apply_to_lab(cur, username, first_name, last_name, degree_level, lab_name):
+def student_apply_to_lab(cur, username, first_name, last_name, degree_level, lab_name) -> str:
     """
     Add a student to the desired lab if the lab is recruiting
     """
