@@ -6,7 +6,7 @@ Python functions used to access MySQL DB programming objects
 # Helpers
 ##########
 
-def format_result_set(rows):
+def format_result_set(rows) -> str:
     """
     Return the formatted result set of a query
     """
@@ -37,7 +37,7 @@ def format_result_set(rows):
 # Student
 ##########
 
-def student_get_all_labs(cur, lab_number_limit):
+def student_get_all_labs(cur, lab_number_limit) -> str:
     """
     Return all of the fields of all of the labs for a student to view when they log in
     """
@@ -69,7 +69,7 @@ def student_apply_to_lab(cur, username, first_name, last_name, degree_level, lab
 # PI
 ##########
 
-def pi_check_valid_username(cur, username):
+def pi_check_valid_username(cur, username) -> bool:
     """
     Check if the inputted username is a valid PI username
     """
@@ -79,7 +79,7 @@ def pi_check_valid_username(cur, username):
     names = [row["username"].lower() for row in rows]
     return username.lower() in names
 
-def pi_get_lab_info(cur, username):
+def pi_get_lab_info(cur, username) -> str:
     """
     Return the information related to a PI's lab and associated college, 
     projects, publications, and lab members
