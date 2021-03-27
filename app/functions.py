@@ -96,16 +96,9 @@ def pi_get_lab_info(cur, username) -> str:
     rows_college = cur.fetchall()
     result += format_result_set(rows_college)
 
-    cur.callproc("pi_projects", args=(username,))
-    rows_project = cur.fetchall()
-    result += format_result_set(rows_project)
-
-    cur.callproc("pi_publication", args=(username,))
-    rows_publication = cur.fetchall()
-    result += format_result_set(rows_publication)
-
-    cur.callproc("pi_labmember", args=(username,))
-    rows_lab_member = cur.fetchall()
-    result += format_result_set(rows_lab_member)
+    for procedure in ("pi_projects", "pi_publication", "pi_labmember"):
+        cur.callproc(procedure, args=(username,))
+        rows = cur.fetchall()
+        result += format_result_set(rows)
     return result
 
