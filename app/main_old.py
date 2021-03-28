@@ -73,7 +73,7 @@ root.mainloop()
 '''
 
 import pymysql
-from functions import *
+# from functions import *
 
 try:
     cnx = pymysql.connect(host='localhost', user="root",
@@ -91,7 +91,7 @@ except pymysql.err.OperationalError as e:
 try:
     cur = cnx.cursor()
     
-    print(student_get_all_labs(cur, 10))
+    # print(student_get_all_labs(cur, 10))
 
 except pymysql.Error as e:
     print('Error: %d: %s' % (e.args[0], e.args[1]))

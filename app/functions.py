@@ -2,6 +2,16 @@
 Python functions used to access MySQL DB programming objects
 """
 import pymysql
+import attr
+
+
+##########
+# MySQL Server User Login Information
+##########
+
+
+db_username = "root"
+db_password = "Nathangong12"
 
 
 ##########
@@ -14,21 +24,38 @@ def connect_to_db():
     Connect to the DB and return the Cursor
     """
     try:
-        cnx = pymysql.connect(host='localhost', user="root",
-                              password="Nathangong12",
+        cnx = pymysql.connect(host='localhost', user=db_username,
+                              password=db_password,
                               db='nulabs', charset='utf8mb4',
                               cursorclass=pymysql.cursors.DictCursor)
     except pymysql.err.OperationalError as e:
         if e.args[0] == 1045:
-            print('Invalid credentials :(')
+            print('Invalid credentials')
         else:
             print('Error: %d: %s' % (e.args[0], e.args[1]))
     return cnx
 
 
-def format_result_set(rows) -> str:
+@attr.s(auto_attribs=True)
+class Result:
+    """ Formatted query result set """
+    columns: list
+    fields: list
+
+
+def format_result_set(rows):
     """
-    Return the formatted result set of a query
+    Return the formatted result set of a query as a list
+    """
+    column_names = list(rows[0].keys())
+    fields_list = [list(row.values()) for row in rows]
+    
+    yield Result(column_names, fields_list)
+
+
+def _format_result_set(rows) -> str:
+    """
+    Return the formatted result set of a query as a string
     """
     result = ""
 
@@ -112,7 +139,7 @@ def check_building_in_admin_college(building_name, username) -> bool:
 ##########
 
 
-def student_get_all_labs(lab_number_limit) -> str:
+def student_get_all_labs(lab_number_limit) -> list:
     """
     Return all of the fields of all of the labs for a student to view when they log in
     """
@@ -122,7 +149,7 @@ def student_get_all_labs(lab_number_limit) -> str:
     stmt = "select * from lab limit {}".format(lab_number_limit)
     cur.execute(stmt)
     rows = cur.fetchall()
-    result = format_result_set(rows)
+    result = [format_result_set(rows)]
 
     cnx.close()
     return result
@@ -142,11 +169,11 @@ def student_apply_to_lab(username, first_name, last_name, degree_level, lab_name
     row = cur.fetchone()
 
     if row['recruiting_status'] == 0:
-        result = "{} is not currently recruiting :(".format(lab_name)
+        result = "{} is not currently recruiting".format(lab_name)
     else:
         cur.callproc("add_student", args=(
             username, first_name, last_name, degree_level, lab_name))
-        result = "{} was successfully added to {}!".format(username, lab_name)
+        result = "{} was successfully added to {}".format(username, lab_name)
 
     cnx.close()
     return result
@@ -174,31 +201,31 @@ def pi_check_valid_username(username) -> bool:
     return valid_username
 
 
-def pi_get_lab_info(username) -> str:
+def pi_get_lab_info(username) -> list:
     """
     Return the information related to a PI's lab and associated college, 
     projects, publications, and lab members
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
-    result = ""
+    result = []
 
     stmt_lab = "select * from lab l where l.lab_name = get_lab('{}')".format(
         username)
     cur.execute(stmt_lab)
     rows_lab = cur.fetchall()
-    result += format_result_set(rows_lab)
+    result.append(format_result_set(rows_lab))
 
     stmt_college = "select get_college('{}')".format(username)
     cur.execute(stmt_college)
     rows_college = cur.fetchall()
-    result += format_result_set(rows_college)
+    result.append(format_result_set(rows_college))
 
     for procedure in ("pi_projects", "pi_publication", "pi_labmember"):
         cur.callproc(procedure, args=(username,))
         rows = cur.fetchall()
-        result += format_result_set(rows)
-    
+        result.append(format_result_set(rows))
+
     cnx.close()
     return result
 
@@ -251,7 +278,7 @@ def pi_add_lab_member(title, s_username, p_username) -> str:
         result += "Successfully added {} to {}".format(s_username, title)
     else:
         result += "{} is not a project associated with your lab".format(title)
-    
+
     cnx.close()
     return result
 
@@ -312,7 +339,7 @@ def pi_delete_project(title, username) -> str:
         result += "Successfully deleted {}".format(title)
     else:
         result += "{} is not a project associated with your lab".format(title)
-    
+
     cnx.close()
     return result
 
@@ -339,7 +366,7 @@ def admin_check_valid_username(username) -> bool:
     return valid_username
 
 
-def admin_get_lab_info(username) -> str:
+def admin_get_lab_info(username) -> list:
     """
     Return the information related to all labs associated with an Admin's college
     """
@@ -349,7 +376,7 @@ def admin_get_lab_info(username) -> str:
 
     cur.callproc("get_labs", args=(username,))
     rows = cur.fetchall()
-    result += format_result_set(rows)
+    result = [format_result_set(rows)]
 
     cnx.close()
     return result
@@ -362,7 +389,8 @@ def admin_create_lab(lab_name, lab_description, website, recruiting_status, depa
     cnx = connect_to_db()
     cur = cnx.cursor()
     result = ""
-    building_in_college = check_building_in_admin_college(building_name, username)
+    building_in_college = check_building_in_admin_college(
+        building_name, username)
 
     if building_in_college:
         cur.callproc("create_lab", args=(lab_name, lab_description,
@@ -383,7 +411,8 @@ def admin_update_building_street(building_name, street, username) -> str:
     cnx = connect_to_db()
     cur = cnx.cursor()
     result = ""
-    building_in_college = check_building_in_admin_college(building_name, username)
+    building_in_college = check_building_in_admin_college(
+        building_name, username)
 
     if building_in_college:
         cur.callproc("update_lab_building_street",
