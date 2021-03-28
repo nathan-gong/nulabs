@@ -54,7 +54,7 @@ CREATE PROCEDURE pi_lab_info(IN username VARCHAR(255))
 	END $$
 delimiter ;
 
-DROP FUNCTION get_college;
+
 delimiter $$
 CREATE FUNCTION get_college(username VARCHAR(255))
 	RETURNS VARCHAR(16)
@@ -110,8 +110,6 @@ BEGIN
 INSERT INTO project VALUES (title, project_description, lab_name);
 END $$
 delimiter ;
-
-SET @e = "";
 
 delimiter $$
 CREATE PROCEDURE update_description(IN title VARCHAR(256), IN project_description VARCHAR(3000))
