@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <h1>student page</h1>
+    {% if message %}
+            <p><strong>message: </strong> {{ message }}
+    {% endif %}
+
+    <form action="" method="post">
+        <dl>
+        <dt>Username:</dt>
+        <dd>
+                <input type="text" name="username" 
+                value="{{ request.form.username }}">
+        </dd>
+
+        <dt>First name:</dt>
+        <dd>
+                <input type="text" name="first_name" 
+                value="{{ request.form.first_name }}">
+        </dd>
+
+        <dt>Last name:</dt>
+        <dd>
+                <input type="text" name="last_name" 
+                value="{{ request.form.last_name }}">
+        </dd>
+
+        <dt>Degree level:</dt>
+        <dd>
+                <input type="text" name="degree_level" 
+                value="{{ request.form.degree_level }}">
+        </dd>
+
+        <dt>Lab name:</dt>
+        <dd>
+                <input type="text" name="lab_name" 
+                value="{{ request.form.lab_name }}">
+        </dd>
+        </dl>
+        <p><input type="submit" value="Apply"></p>
+    </form>
+
+    <a href="{{ url_for('index') }}"><button>Back to main page</button></a>
+
+</body>
+
+</html>

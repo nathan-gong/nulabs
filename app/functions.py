@@ -163,17 +163,22 @@ def student_apply_to_lab(username, first_name, last_name, degree_level, lab_name
     cur = cnx.cursor()
     result = ""
 
-    stmt = "select recruiting_status from lab where lab.lab_name = '{}'".format(
+    try:
+        stmt = "select recruiting_status from lab where lab.lab_name = '{}'".format(
         lab_name)
-    cur.execute(stmt)
-    row = cur.fetchone()
+        cur.execute(stmt)
+        row = cur.fetchone()
 
-    if row['recruiting_status'] == 0:
-        result = "{} is not currently recruiting".format(lab_name)
-    else:
-        cur.callproc("add_student", args=(
-            username, first_name, last_name, degree_level, lab_name))
-        result = "{} was successfully added to {}".format(username, lab_name)
+        if row['recruiting_status'] == 0:
+            result += "{} is not currently recruiting".format(lab_name)
+        elif row['recruiting_status'] == 1:
+            cur.callproc("add_student", args=(
+                username, first_name, last_name, degree_level, lab_name))
+            result += "{} was successfully added to {}".format(username, lab_name)
+        else:
+            result += "{} was not successfully added to {}".format(username, lab_name)
+    except Exception:
+        result += "{} was not successfully added to {}".format(username, lab_name)
 
     cnx.close()
     return result
@@ -236,13 +241,21 @@ def pi_create_project(title, project_description, username) -> None:
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
-    stmt = "select get_lab('{}')".format(username)
-    cur.execute(stmt)
-    row = cur.fetchone()
-    lab_name = row['lab_name']
+    result = ""
 
-    cur.callproc("create_project", args=(title, project_description, lab_name))
+    try:
+        stmt = "select get_lab('{}')".format(username)
+        cur.execute(stmt)
+        row = cur.fetchone()
+        lab_name = row['lab_name']
+
+        cur.callproc("create_project", args=(title, project_description, lab_name))
+        result += "{} was successfully created".format(title)
+    except Exception:
+        result += "{} was not successfully created".format(title)
+
     cnx.close()
+    return result
 
 
 def pi_update_project_description(title, project_description, username) -> str:
