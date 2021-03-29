@@ -15,8 +15,9 @@ def index():
 
 @app.route('/pi')
 def pi():
-    data = pi_get_lab_info(pi_username)
-    return render_template("pi.html", data=data)
+    lab, college, project, publication, members = pi_get_lab_info(pi_username)
+    return render_template("pi.html", lab=lab, college=college, project=project, 
+    publication=publication, members=members)
 
 @app.route('/admin')
 def admin():
@@ -31,9 +32,11 @@ def login():
 
     if request.method == 'POST':
         if pi_check_valid_username(request.form['username']):
+            global pi_username 
             pi_username = request.form['username']
             return redirect(url_for('pi'))
         elif admin_check_valid_username(request.form['username']):
+            global admin_username
             admin_username = request.form['username']
             return redirect(url_for('admin'))
         else:
@@ -50,7 +53,7 @@ def student():
                         request.form['last_name'], request.form['degree_level'], request.form['lab_name']]
         message = student_apply_to_lab(*student_info)
 
-    data = student_get_all_labs()
+    data = student_get_all_labs(10)
     return render_template("student.html", message=message, data=data)
 
 @app.route('/pi/create_project', methods=['GET', 'POST'])
@@ -150,6 +153,8 @@ def ADMIN_create_building():
         message = admin_update_building_street(*building_info)
 
     return render_template("admin_create_building.html", message=message)
+
+
 
 # Run the app
 

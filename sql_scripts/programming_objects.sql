@@ -68,7 +68,7 @@ CREATE FUNCTION get_college(username VARCHAR(255))
     DECLARE pi_lab VARCHAR(255);
 	SELECT get_lab(username) INTO pi_lab;
     SELECT building_name FROM lab l WHERE l.lab_name = pi_lab INTO pi_building;
-    SELECT college_name FROM building b WHERE b.college_name = pi_building INTO result;
+    SELECT college_name FROM building b WHERE b.building_name = pi_building INTO result;
     RETURN result;
 	END $$
 delimiter ;

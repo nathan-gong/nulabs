@@ -10,7 +10,7 @@ import pymysql
 
 
 db_username = "root"
-db_password = "Nathangong12"
+db_password = "Emmyc2001"
 
 
 ##########
@@ -176,15 +176,16 @@ def pi_get_lab_info(username) -> tuple:
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
+    cur2 = cnx.cursor()
 
     stmt_lab = "select * from lab l where l.lab_name = get_lab('{}')".format(
         username)
     cur.execute(stmt_lab)
     rows_lab = cur.fetchall()
 
-    stmt_college = "select get_college('{}')".format(username)
-    cur.execute(stmt_college)
-    rows_college = cur.fetchall()
+    stmt_college = "select get_college('{}') AS college_name".format(username)
+    cur2.execute(stmt_college)
+    rows_college = cur2.fetchall()
 
     cur.callproc("pi_projects", args=(username,))
     rows_project = cur.fetchall()
@@ -197,6 +198,8 @@ def pi_get_lab_info(username) -> tuple:
 
     cnx.close()
     return rows_lab, rows_college, rows_project, rows_publication, rows_member
+print(pi_get_lab_info('c.riedl')[0])
+print(pi_get_lab_info('c.riedl')[1])
 
 
 def pi_create_project(title, project_description, username) -> str:

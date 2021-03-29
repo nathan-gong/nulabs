@@ -4,6 +4,14 @@
 <head>
     <title>PI</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <style>
+        .yes {
+            color: green;
+        }
+        .no {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,9 +24,28 @@
     <a href="{{ url_for('PI_publish_project') }}"><button>Publish Project</button></a>
     <a href="{{ url_for('PI_delete_project') }}"><button>Delete Project</button></a>
     <a href="{{ url_for('index') }}"><button>Back to main page</button></a>
+
+    <h2> Printing Lab Info</h2>
+    {% for row in lab %}
+    <p> <b> Lab Name </b>  {{row["lab_name"]}}  </p>
+    <p> <b> Lab Description </b>  {{row["lab_description"]}}  </p>
+    <p> <b> Lab Website </b>  <a href = {{row["website"]}}> follow link here</a>  </p>
+    {% if row["recruiting_status"] == 1 %}
     
+    <p style = "color:green"> <b> Lab Recruiting Status </b>  yes </p>
 
+    {%else%}
+    <p style = "color:red"> <b> Lab Recruiting Status </b>  no  </p>
+    {%endif%}
+    <p> <b> Lab Department </b>  {{row["department"]}}  </p>
+    <p> <b> Lab Building </b>  {{row["building_name"]}}  </p>
 
+    {% endfor %}
+
+    <h2> Print College </h2>
+    {%for c in college%}
+    <p> <b> College </b> {{c["college_name"]}} </p>
+    {% endfor %}
 </body>
 
 </html>
