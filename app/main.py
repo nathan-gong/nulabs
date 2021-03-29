@@ -16,7 +16,7 @@ def index():
 @app.route('/pi')
 def pi():
     lab, college, project, publication, members = pi_get_lab_info(pi_username)
-    return render_template("pi.html", lab=lab, college=college, project=project, 
+    return render_template("pi.html", username=pi_username, lab=lab, college=college, project=project, 
     publication=publication, members=members)
 
 @app.route('/admin')
