@@ -5,9 +5,21 @@
 <title>NULabs</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+.middle {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    text-align: center;
+}
+</style>
 </head>
 
 <body>
+    <div class="middle">
     <!-- {% with messages = get_flashed_messages() %}
     {% if messages %}
         <ul>
@@ -21,7 +33,7 @@
     <h1>NULabs</h1>
     <a href="{{ url_for('login') }}"><button>Login as PI/Admin</button></a>
     <a href="{{ url_for('student') }}"><button>Continue as Student</button></a>
-
+</div>
 </body>
 
 </html>
