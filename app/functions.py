@@ -35,51 +35,6 @@ def connect_to_db():
     return cnx
 
 
-# @attr.s(auto_attribs=True)
-# class Result:
-#     """ Formatted query result set """
-#     columns: list
-#     fields: list
-
-
-# def format_result_set(rows):
-#     """
-#     Return the formatted result set of a query as a list
-#     """
-#     column_names = list(rows[0].keys())
-#     fields_list = [list(row.values()) for row in rows]
-    
-#     yield Result(column_names, fields_list)
-
-
-def _format_result_set(rows) -> str:
-    """
-    Return the formatted result set of a query as a string
-    """
-    result = ""
-
-    column_names = list(rows[0].keys())
-    num_columns = len(column_names)
-    fields_list = [list(row.values()) for row in rows]
-
-    format_pattern = "{:<30} \t "
-    format_string = format_pattern * num_columns
-
-    header = format_string.format(*column_names) + "\n"
-    line = ("_" * 40 * num_columns) + "\n"
-    result += header + line
-
-    for fields in fields_list:
-        truncated_fields = []
-        for field in fields:
-            if isinstance(field, str):
-                truncated_fields.append(field[:30])
-            elif isinstance(field, int):
-                truncated_fields.append(("YES" if field == 1 else "NO"))
-        result += format_string.format(*truncated_fields) + "\n"
-    return result
-
-
 def check_project_in_pi_lab(title, username) -> bool:
     """
     Validate that the inputted project title is associated with the PI's lab
@@ -129,13 +84,18 @@ def check_building_in_admin_college(building_name, username) -> bool:
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
+    building_in_admin_college = None
 
-    cur.callproc("get_admin_building_names", args=(username,))
-    rows = cur.fetchall()
-    admin_building_names = [row["building_name"].lower() for row in rows]
+    try:
+        cur.callproc("get_admin_building_names", args=(username,))
+        rows = cur.fetchall()
+        admin_building_names = [row["building_name"].lower() for row in rows]
+        building_in_admin_college = (building_name in admin_building_names)
+    except Exception:
+        building_in_admin_college = False
 
     cnx.close()
-    return building_name in admin_building_names
+    return building_in_admin_college
 
 
 ##########
@@ -143,7 +103,7 @@ def check_building_in_admin_college(building_name, username) -> bool:
 ##########
 
 
-def student_get_all_labs(lab_number_limit=0) -> list:
+def student_get_all_labs(lab_number_limit=1000) -> list:
     """
     Return all of the fields of all of the labs for a student to view when they log in
     """
@@ -209,7 +169,7 @@ def pi_check_valid_username(username) -> bool:
     return valid_username
 
 
-def pi_get_lab_info(username) -> list:
+def pi_get_lab_info(username) -> tuple:
     """
     Return the information related to a PI's lab and associated college, 
     projects, publications, and lab members
@@ -239,7 +199,7 @@ def pi_get_lab_info(username) -> list:
     return rows_lab, rows_college, rows_project, rows_publication, rows_member
 
 
-def pi_create_project(title, project_description, username) -> None:
+def pi_create_project(title, project_description, username) -> str:
     """
     Create a new project associated with a PI's lab
     """
@@ -422,13 +382,16 @@ def admin_create_lab(lab_name, lab_description, website, recruiting_status, depa
     building_in_college = check_building_in_admin_college(
         building_name, username)
 
-    if building_in_college:
-        cur.callproc("create_lab", args=(lab_name, lab_description,
-                     website, recruiting_status, department, building_name))
-        result += "Successfully created {}".format(lab_name)
-    else:
-        result += "{} is not a building associated with your college".format(
-            building_name)
+    try:
+        if building_in_college:
+            cur.callproc("create_lab", args=(lab_name, lab_description,
+                        website, recruiting_status, department, building_name))
+            result += "Successfully created {}".format(lab_name)
+        else:
+            result += "{} is not a building associated with your college".format(
+                building_name)
+    except Exception:
+        result += "Did not successfully create {}".format(lab_name)
 
     cnx.close()
     return result
@@ -444,24 +407,36 @@ def admin_update_building_street(building_name, street, username) -> str:
     building_in_college = check_building_in_admin_college(
         building_name, username)
 
-    if building_in_college:
-        cur.callproc("update_lab_building_street",
-                     args=(building_name, street))
-        result += "Successfully updated {} street to {}".format(
+    try:
+        if building_in_college:
+            cur.callproc("update_lab_building_street",
+                        args=(building_name, street))
+            result += "Successfully updated {} street to {}".format(
+                building_name, street)
+        else:
+            result += "{} is not a building associated with your college".format(
+                building_name)
+    except Exception:
+        result += "Did not successfully update {} street to {}".format(
             building_name, street)
-    else:
-        result += "{} is not a building associated with your college".format(
-            building_name)
 
     cnx.close()
     return result
 
 
-def admin_create_building(building_name, street, username) -> None:
+def admin_create_building(building_name, street, username) -> str:
     """
     Create a new lab building associated with the Admin's college
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
-    cur.callproc("create_lab_building", args=(building_name, street, username))
+    result = ""
+
+    try:
+        cur.callproc("create_lab_building", args=(building_name, street, username))
+        result += "{} was successfully created".format(building_name)
+    except Exception:
+        result += "{} was not successfully created".format(building_name)
+
     cnx.close()
+    return result

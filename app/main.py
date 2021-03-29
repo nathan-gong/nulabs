@@ -15,7 +15,13 @@ def index():
 
 @app.route('/pi')
 def pi():
-    return render_template("pi.html")
+    data = pi_get_lab_info(pi_username)
+    return render_template("pi.html", data=data)
+
+@app.route('/admin')
+def admin():
+    data = admin_get_lab_info(admin_username)
+    return render_template("admin.html", data=data)
 
 # Background processes
 
@@ -29,7 +35,7 @@ def login():
             return redirect(url_for('pi'))
         elif admin_check_valid_username(request.form['username']):
             admin_username = request.form['username']
-            return redirect(url_for('index')) # change this 
+            return redirect(url_for('admin'))
         else:
             error = 'Invalid username. Please try again!'
 
@@ -113,6 +119,39 @@ def PI_delete_project():
 
     return render_template("pi_delete_project.html", message=message)
 
+@app.route('/admin/create_lab', methods=['GET', 'POST'])
+def ADMIN_create_lab():
+    message = None
+
+    if request.method == 'POST':
+        lab_info = [request.form['lab_name'], request.form['lab_description'], 
+                request.form['website'], request.form['recruiting_status'],
+                request.form['department'], request.form['building_name'], admin_username]
+        message = admin_create_lab(*lab_info)
+
+    return render_template("admin_create_lab.html", message=message)
+
+@app.route('/admin/update_building', methods=['GET', 'POST'])
+def ADMIN_update_building_street():
+    message = None
+
+    if request.method == 'POST':
+        building_info = [request.form['building_name'], request.form['street'], admin_username]
+        message = admin_update_building_street(*building_info)
+
+    return render_template("admin_update_building_street.html", message=message)
+
+@app.route('/admin/create_building', methods=['GET', 'POST'])
+def ADMIN_create_building():
+    message = None
+
+    if request.method == 'POST':
+        building_info = [request.form['building_name'], request.form['street'], admin_username]
+        message = admin_update_building_street(*building_info)
+
+    return render_template("admin_create_building.html", message=message)
+
+# Run the app
 
 if __name__ == "__main__":
     app.run(debug=True)

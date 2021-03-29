@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Create Building</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <h1>admin createbuilding</h1>
+    {% if message %}
+            <p><strong>message: </strong> {{ message }}
+    {% endif %}
+
+    <form action="" method="post">
+        <dl>
+        <dt>Building Name:</dt>
+        <dd>
+                <input type="text" name="building_name" 
+                value="{{ request.form.building_name }}">
+        </dd>
+        
+        <dt>Street (360 Huntington Ave):</dt>
+        <dd>
+                <input type="text" name="street" 
+                value="{{ request.form.street }}">
+        </dd>
+
+        </dl>
+        <p><input type="submit" value="Create"></p>
+    </form>
+
+    <a href="{{ url_for('admin') }}"><button>Back to Admin main page</button></a>
+
+    <a href="{{ url_for('index') }}"><button>Back to main page</button></a>
+
+</body>
+
+</html>

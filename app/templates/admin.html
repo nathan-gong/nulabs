@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <h1>admin page</h1>
+
+    <a href="{{ url_for('ADMIN_create_lab') }}"><button>Create New Lab</button></a>
+    <a href="{{ url_for('ADMIN_update_building_street') }}"><button>Update Building</button></a>
+    <a href="{{ url_for('ADMIN_create_building') }}"><button>Create New Building</button></a>
+    <a href="{{ url_for('index') }}"><button>Back to main page</button></a>
+
+
+</body>
+
+</html>
