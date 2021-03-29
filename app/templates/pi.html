@@ -5,17 +5,58 @@
     <title>PI</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
     <style>
-        .yes {
-            color: green;
+        /* The sidebar menu */
+        .sidenav {
+        height: 100%; /* Full-height: remove this if you want "auto" height */
+        width: 160px; /* Set the width of the sidebar */
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 20px;
         }
-        .no {
-            color: red;
+
+        /* The navigation menu links */
+        .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
         }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+
+        /* Style page content */
+        .main {
+        margin-left: 160px; /* Same as the width of the sidebar */
+        padding: 0px 10px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
     </style>
 </head>
 
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="#info">Lab Info</a>
+    <a href="#project">Project</a>
+    <a href="#publication">Publication</a>
+    <a href="#member">Lab Members</a>
+  </div>
+<div class = "main">
 <body>
-    <h1>pi page</h1>
+    <h1>PI Page</h1>
 
     <a href="{{ url_for('PI_create_project') }}"><button>Create New Project</button></a>
     <a href="{{ url_for('PI_update_project_description') }}"><button>Update Project</button></a>
@@ -25,6 +66,7 @@
     <a href="{{ url_for('PI_delete_project') }}"><button>Delete Project</button></a>
     <a href="{{ url_for('index') }}"><button>Back to main page</button></a>
 
+    <div id="info">
     <h2> Printing Lab Info</h2>
     {% for row in lab %}
     <p> <b> Lab Name </b>  {{row["lab_name"]}}  </p>
@@ -41,11 +83,41 @@
     <p> <b> Lab Building </b>  {{row["building_name"]}}  </p>
 
     {% endfor %}
-
+</div>
+<div id="college">
     <h2> Print College </h2>
     {%for c in college%}
     <p> <b> College </b> {{c["college_name"]}} </p>
     {% endfor %}
+</div>
+
+<div id="project">
+    <h2> Print Project Info </h2>
+    {% for p in project %}
+    <p><b>Title</b> {{p["title"]}}</p>
+    <p><b>Project Description</b> {{p["project_description"]}}</p>
+    {% endfor %}
+</div>
+
+<div id ="publication">
+    <h2> Publication Info </h2>
+    {% for pb in publication %}
+    <p><b>DOI </b> {{pb["doi"]}}</p>
+    <p><b>Title </b> {{pb["title"]}}</p>
+    <p><b>Publish Date</b> {{pb["publish_date"]}}</p>
+    <p><b>Journal</b> {{pb["journal"]}}</p>
+    <br>
+    {% endfor %}
+</div>
+
+<div id = "member">
+    <h2> Member </h2>
+    {% for m in member %}
+    <p><b> Username </b> {{m["username"]}}</p>
+    <p><b> Project </b> {{m["title"]}}</p>
+    {% endfor %}
+</div>
 </body>
+</div>
 
 </html>

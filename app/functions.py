@@ -198,9 +198,7 @@ def pi_get_lab_info(username) -> tuple:
 
     cnx.close()
     return rows_lab, rows_college, rows_project, rows_publication, rows_member
-print(pi_get_lab_info('c.riedl')[0])
-print(pi_get_lab_info('c.riedl')[1])
-
+print(pi_get_lab_info('c.riedl')[4])
 
 def pi_create_project(title, project_description, username) -> str:
     """
