@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>PI Create Project</title>
+    <title>PI Delete Project</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
 </head>
 
 <body>
-    <h1>pi create project</h1>
+    <h1>pi delete project</h1>
     {% if message %}
             <p><strong>message: </strong> {{ message }}
     {% endif %}
@@ -16,18 +16,12 @@
         <dl>
         <dt>Project Title:</dt>
         <dd>
-                <input type="text" name="title" 
-                value="{{ request.form.title }}">
-        </dd>
-
-        <dt>Project Description:</dt>
-        <dd>
-                <input type="text" name="project_description" 
-                value="{{ request.form.project_description }}">
+                <input type="text" name="project_title" 
+                value="{{ request.form.project_title }}">
         </dd>
 
         </dl>
-        <p><input type="submit" value="Create"></p>
+        <p><input type="submit" value="Delete"></p>
     </form>
 
     <a href="{{ url_for('pi') }}"><button>Back to PI main page</button></a>

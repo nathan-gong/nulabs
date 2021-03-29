@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PI Publish Project</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <h1>pi publish project</h1>
+    {% if message %}
+            <p><strong>message: </strong> {{ message }}
+    {% endif %}
+
+    <form action="" method="post">
+        <dl>
+        <dt>DOI:</dt>
+        <dd>
+                <input type="text" name="doi" 
+                value="{{ request.form.doi }}">
+        </dd>
+
+        <dt>Publication Title:</dt>
+        <dd>
+                <input type="text" name="publication_title" 
+                value="{{ request.form.publication_title }}">
+        </dd>
+
+        <dt>Publish Year:</dt>
+        <dd>
+                <input type="text" name="publish_date" 
+                value="{{ request.form.publish_date }}">
+        </dd>
+
+        <dt>Journal Name:</dt>
+        <dd>
+                <input type="text" name="journal" 
+                value="{{ request.form.journal }}">
+        </dd>
+
+        <dt>Project Title:</dt>
+        <dd>
+                <input type="text" name="project_title" 
+                value="{{ request.form.project_title }}">
+        </dd>
+
+        </dl>
+        <p><input type="submit" value="Publish"></p>
+    </form>
+
+    <a href="{{ url_for('pi') }}"><button>Back to PI main page</button></a>
+
+    <a href="{{ url_for('index') }}"><button>Back to main page</button></a>
+
+</body>
+
+</html>

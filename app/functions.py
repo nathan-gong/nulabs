@@ -36,21 +36,21 @@ def connect_to_db():
     return cnx
 
 
-@attr.s(auto_attribs=True)
-class Result:
-    """ Formatted query result set """
-    columns: list
-    fields: list
+# @attr.s(auto_attribs=True)
+# class Result:
+#     """ Formatted query result set """
+#     columns: list
+#     fields: list
 
 
-def format_result_set(rows):
-    """
-    Return the formatted result set of a query as a list
-    """
-    column_names = list(rows[0].keys())
-    fields_list = [list(row.values()) for row in rows]
+# def format_result_set(rows):
+#     """
+#     Return the formatted result set of a query as a list
+#     """
+#     column_names = list(rows[0].keys())
+#     fields_list = [list(row.values()) for row in rows]
     
-    yield Result(column_names, fields_list)
+#     yield Result(column_names, fields_list)
 
 
 def _format_result_set(rows) -> str:
@@ -87,20 +87,25 @@ def check_project_in_pi_lab(title, username) -> bool:
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
+    project_in_pi_lab = None
 
-    stmt = "select get_lab('{}')".format(username)
-    cur.execute(stmt)
-    row = cur.fetchone()
-    lab_name = row['lab_name']
+    try:
+        stmt = "select get_lab('{}')".format(username)
+        cur.execute(stmt)
+        row = cur.fetchone()
+        lab_name = row['lab_name']
 
-    stmt_project_lab = "select lab_name from project p where p.title = '{}'".format(
-        title)
-    cur.execute(stmt_project_lab)
-    row_project_lab = cur.fetchone()
-    project_lab_name = row_project_lab['lab_name']
+        stmt_project_lab = "select lab_name from project p where p.title = '{}'".format(
+            title)
+        cur.execute(stmt_project_lab)
+        row_project_lab = cur.fetchone()
+        project_lab_name = row_project_lab['lab_name']
+        project_in_pi_lab = (lab_name == project_lab_name)
+    except Exception:
+        project_in_pi_lab = False
 
     cnx.close()
-    return lab_name == project_lab_name
+    return project_in_pi_lab
 
 
 def get_building_names() -> list:
@@ -139,7 +144,7 @@ def check_building_in_admin_college(building_name, username) -> bool:
 ##########
 
 
-def student_get_all_labs(lab_number_limit) -> list:
+def student_get_all_labs(lab_number_limit=0) -> list:
     """
     Return all of the fields of all of the labs for a student to view when they log in
     """
@@ -149,10 +154,9 @@ def student_get_all_labs(lab_number_limit) -> list:
     stmt = "select * from lab limit {}".format(lab_number_limit)
     cur.execute(stmt)
     rows = cur.fetchall()
-    result = [format_result_set(rows)]
 
     cnx.close()
-    return result
+    return rows
 
 
 def student_apply_to_lab(username, first_name, last_name, degree_level, lab_name) -> str:
@@ -213,26 +217,27 @@ def pi_get_lab_info(username) -> list:
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
-    result = []
 
     stmt_lab = "select * from lab l where l.lab_name = get_lab('{}')".format(
         username)
     cur.execute(stmt_lab)
     rows_lab = cur.fetchall()
-    result.append(format_result_set(rows_lab))
 
     stmt_college = "select get_college('{}')".format(username)
     cur.execute(stmt_college)
     rows_college = cur.fetchall()
-    result.append(format_result_set(rows_college))
 
-    for procedure in ("pi_projects", "pi_publication", "pi_labmember"):
-        cur.callproc(procedure, args=(username,))
-        rows = cur.fetchall()
-        result.append(format_result_set(rows))
+    cur.callproc("pi_projects", args=(username,))
+    rows_project = cur.fetchall()
+
+    cur.callproc("pi_publication", args=(username,))
+    rows_publication = cur.fetchall()
+
+    cur.callproc("pi_labmember", args=(username,))
+    rows_member = cur.fetchall()
 
     cnx.close()
-    return result
+    return rows_lab, rows_college, rows_project, rows_publication, rows_member
 
 
 def pi_create_project(title, project_description, username) -> None:
@@ -267,11 +272,14 @@ def pi_update_project_description(title, project_description, username) -> str:
     result = ""
     project_in_lab = check_project_in_pi_lab(title, username)
 
-    if project_in_lab:
-        cur.callproc("update_description", args=(title, project_description))
-        result += "Successfully updated description of {}".format(title)
-    else:
-        result += "{} is not a project associated with your lab".format(title)
+    try:
+        if project_in_lab:
+            cur.callproc("update_description", args=(title, project_description))
+            result += "Successfully updated description of {}".format(title)
+        else:
+            result += "{} is not a project associated with your lab".format(title)
+    except Exception:
+        result += "Did not successfully update description of {}".format(title)
 
     cnx.close()
     return result
@@ -286,11 +294,14 @@ def pi_add_lab_member(title, s_username, p_username) -> str:
     result = ""
     project_in_lab = check_project_in_pi_lab(title, p_username)
 
-    if project_in_lab:
-        cur.callproc("add_member", args=(title, s_username, p_username))
-        result += "Successfully added {} to {}".format(s_username, title)
-    else:
-        result += "{} is not a project associated with your lab".format(title)
+    try:
+        if project_in_lab:
+            cur.callproc("add_member", args=(title, s_username, p_username))
+            result += "Successfully added {} to {}".format(s_username, title)
+        else:
+            result += "{} is not a project associated with your lab".format(title)
+    except Exception:
+        result += "Did not successfully add {} to {}".format(s_username, title)
 
     cnx.close()
     return result
@@ -305,11 +316,14 @@ def pi_delete_lab_member(title, s_username, p_username) -> str:
     result = ""
     project_in_lab = check_project_in_pi_lab(title, p_username)
 
-    if project_in_lab:
-        cur.callproc("delete_member", args=(title, s_username, p_username))
-        result += "Successfully removed {} from {}".format(s_username, title)
-    else:
-        result += "{} is not a project associated with your lab".format(title)
+    try:
+        if project_in_lab:
+            cur.callproc("delete_member", args=(title, s_username, p_username))
+            result += "Successfully removed {} from {}".format(s_username, title)
+        else:
+            result += "{} is not a project associated with your lab".format(title)
+    except Exception:
+        result += "Did not successfully remove {} from {}".format(s_username, title)
 
     cnx.close()
     return result
@@ -324,14 +338,17 @@ def pi_publish_project(doi, publication_title, publish_date, journal, project_ti
     result = ""
     project_in_lab = check_project_in_pi_lab(project_title, username)
 
-    if project_in_lab:
-        cur.callproc("add_publication_to_project", args=(
-            doi, publication_title, publish_date, journal, project_title))
-        result += "Successfully added {} to {}".format(
-            publication_title, project_title)
-    else:
-        result += "{} is not a project associated with your lab".format(
-            project_title)
+    try:
+        if project_in_lab:
+            cur.callproc("add_publication_to_project", args=(
+                doi, publication_title, publish_date, journal, project_title))
+            result += "Successfully added {} to {}".format(
+                publication_title, project_title)
+        else:
+            result += "{} is not a project associated with your lab".format(
+                project_title)
+    except Exception:
+        result += "Did not successfully add {} to {}".format(publication_title, project_title)
 
     cnx.close()
     return result
@@ -347,11 +364,14 @@ def pi_delete_project(title, username) -> str:
     result = ""
     project_in_lab = check_project_in_pi_lab(title, username)
 
-    if project_in_lab:
-        cur.callproc("delete_project", args=(title))
-        result += "Successfully deleted {}".format(title)
-    else:
-        result += "{} is not a project associated with your lab".format(title)
+    try:
+        if project_in_lab:
+            cur.callproc("delete_project", args=(title))
+            result += "Successfully deleted {}".format(title)
+        else:
+            result += "{} is not a project associated with your lab".format(title)
+    except Exception:
+        result += "Did not successfully delete {}".format(title)
 
     cnx.close()
     return result
@@ -389,10 +409,9 @@ def admin_get_lab_info(username) -> list:
 
     cur.callproc("get_labs", args=(username,))
     rows = cur.fetchall()
-    result = [format_result_set(rows)]
 
     cnx.close()
-    return result
+    return rows
 
 
 def admin_create_lab(lab_name, lab_description, website, recruiting_status, department, building_name, username) -> str:

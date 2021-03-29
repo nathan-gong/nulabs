@@ -44,7 +44,8 @@ def student():
                         request.form['last_name'], request.form['degree_level'], request.form['lab_name']]
         message = student_apply_to_lab(*student_info)
 
-    return render_template("student.html", message=message)
+    data = student_get_all_labs()
+    return render_template("student.html", message=message, data=data)
 
 @app.route('/pi/create_project', methods=['GET', 'POST'])
 def PI_create_project():
@@ -57,18 +58,60 @@ def PI_create_project():
 
     return render_template("pi_create_project.html", message=message)
 
+@app.route('/pi/update_project', methods=['GET', 'POST'])
+def PI_update_project_description():
+    message = None
 
+    if request.method == 'POST':
+        project_info = [request.form['title'], request.form['project_description'],
+                        pi_username]
+        message = pi_create_project(*project_info)
 
+    return render_template("pi_update_project_description.html", message=message)
 
-'''
+@app.route('/pi/add_member', methods=['GET', 'POST'])
+def PI_add_lab_member():
+    message = None
 
-    <a href="{{ url_for('pi_create_project') }}"><button>Create New Project</button></a>
-    <a href="{{ url_for('pi_update_project_description') }}"><button>Update Project Information</button></a>
-    <a href="{{ url_for('pi_add_lab_member') }}"><button>Add Lab Member</button></a>
-    <a href="{{ url_for('pi_delete_lab_member') }}"><button>Delete Lab Member</button></a>
-    <a href="{{ url_for('pi_publish_project') }}"><button>Publish Project</button></a>
-    <a href="{{ url_for('pi_delete_project') }}"><button>Delete Project</button></a>
-'''
+    if request.method == 'POST':
+        lab_member_info = [request.form['title'], request.form['s_username'],
+                            pi_username]
+        message = pi_add_lab_member(*lab_member_info)
+
+    return render_template("pi_add_lab_member.html", message=message)
+
+@app.route('/pi/delete_member', methods=['GET', 'POST'])
+def PI_delete_lab_member():
+    message = None
+
+    if request.method == 'POST':
+        lab_member_info = [request.form['title'], request.form['s_username'],
+                            pi_username]
+        message = pi_add_lab_member(*lab_member_info)
+
+    return render_template("pi_delete_lab_member.html", message=message)
+
+@app.route('/pi/publish_project', methods=['GET', 'POST'])
+def PI_publish_project():
+    message = None
+
+    if request.method == 'POST':
+        publication_info = [request.form['doi'], request.form['publication_title'],
+                        request.form['publish_date'], request.form['journal'],
+                            request.form['project_title'], pi_username]
+        message = pi_publish_project(*publication_info)
+
+    return render_template("pi_publish_project.html", message=message)
+
+@app.route('/pi/delete_project', methods=['GET', 'POST'])
+def PI_delete_project():
+    message = None
+
+    if request.method == 'POST':
+        project_info = [request.form['project_title'], pi_username]
+        message = pi_delete_project(*project_info)
+
+    return render_template("pi_delete_project.html", message=message)
 
 
 if __name__ == "__main__":
