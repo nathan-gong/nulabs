@@ -23,7 +23,6 @@ To run this application on your local machine, please complete the following ste
 
 ###### Back-end
 
-    - Attrs
     - Flask
     - Pandas
     - PyMySQL

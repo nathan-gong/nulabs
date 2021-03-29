@@ -2,7 +2,6 @@
 Python functions used to access MySQL DB programming objects
 """
 import pymysql
-import attr
 
 
 ##########
