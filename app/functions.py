@@ -404,7 +404,6 @@ def admin_get_lab_info(username) -> list:
     """
     cnx = connect_to_db()
     cur = cnx.cursor()
-    result = ""
 
     cur.callproc("get_labs", args=(username,))
     rows = cur.fetchall()
