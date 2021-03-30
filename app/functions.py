@@ -374,7 +374,7 @@ def admin_get_lab_info(username) -> tuple:
     college = rows_college['college_name']
     cnx.close()
     return rows, college
-print(admin_get_lab_info('c.brodley')[0])
+
 
 def admin_create_lab(lab_name, lab_description, website, recruiting_status, department, building_name, username) -> str:
     """

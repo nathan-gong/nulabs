@@ -155,7 +155,6 @@ def ADMIN_create_building():
     return render_template("admin_create_building.html", message=message)
 
 
-
 # Run the app
 
 if __name__ == "__main__":

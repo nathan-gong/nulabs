@@ -57,46 +57,48 @@
     </form>
 </body>
 -->
+
 <head>
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <style>
-    .middle {
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-        -ms-transform:translate(-50%,-50%);
-        text-align: center;
-    }
-    .image {
-        background-image: url('/static/krentzman.jpg');
-        height: 100%; 
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0.75;
-        filter: brightness(65%);
-    }
-    
-    .padding {
-        padding: 30px 12px;
-    }
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    .background {
-        background-color: rgb(255, 255, 255, 0.6);
-    }
-    
+    <style>
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .image {
+            background-image: url('/static/krentzman.jpg');
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.75;
+            filter: brightness(65%);
+        }
+
+        .padding {
+            padding: 30px 12px;
+        }
+
+        .background {
+            background-color: rgb(255, 255, 255, 0.6);
+        }
     </style>
-    </head>
-    
-    <body>
-        <div class="middle image">
-        </div>
-        <!-- {% with messages = get_flashed_messages() %}
+</head>
+
+<body>
+    <div class="middle image">
+    </div>
+    <!-- {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul>
                 {% for message in messages %}
@@ -105,24 +107,23 @@
             </ul>
             {% endif %}
         {% endwith %} -->
-        <div class="middle padding background">
-            <h1>Login</h1>
+    <div class="middle padding background">
+        <h1>Login</h1>
 
-            {% if error %}
-               <p><strong>Error:</strong> {{ error }}
+        {% if error %}
+        <p><strong>Error:</strong> {{ error }}
             {% endif %}
-            
-            <form action="" method="post">
-               <dl>
-                  <dt>Username:</dt>
-                  <dd>
-                     <input type="text" name="username" 
-                        value="{{ request.form.username }}">
-                  </dd>
-               </dl>
-               <p><input type="submit" value="Login"></p>
-            </form>    
-        </div>
-    </body>
-</html>
 
+        <form action="" method="post">
+            <dl>
+                <dt>Username:</dt>
+                <dd>
+                    <input type="text" name="username" value="{{ request.form.username }}">
+                </dd>
+            </dl>
+            <p><input type="submit" value="Login"></p>
+        </form>
+    </div>
+</body>
+
+</html>
