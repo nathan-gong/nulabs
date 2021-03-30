@@ -68,11 +68,12 @@ CREATE FUNCTION get_college(username VARCHAR(255))
     DECLARE pi_lab VARCHAR(255);
 	SELECT get_lab(username) INTO pi_lab;
     SELECT building_name FROM lab l WHERE l.lab_name = pi_lab INTO pi_building;
-    SELECT college_name FROM building b WHERE b.building_name = pi_building INTO result;
+    SELECT college_name c FROM building b WHERE b.building_name = pi_building INTO result;
     RETURN result;
 	END $$
 delimiter ;
-
+DROP FUNCTION get_college;
+SELECT get_college('c.riedl');
 delimiter $$
 CREATE PROCEDURE pi_projects(IN username VARCHAR(255))
 	BEGIN
@@ -93,6 +94,7 @@ CREATE PROCEDURE pi_publication(IN username VARCHAR(255))
 			(SELECT title FROM project p WHERE p.lab_name = pi_lab));
 	END $$
 delimiter ;
+
 
 delimiter $$
 CREATE PROCEDURE pi_labmember(IN username VARCHAR(255))

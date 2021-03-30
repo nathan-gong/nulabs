@@ -129,11 +129,11 @@
         {% for p in project %}
         <div class="accordion-item">
             <h2 class="accordion-header" id="lab_project">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target= #{{p["title"]}} aria-expanded="false" aria-controls={{p["title"]}}>
                 {{p["title"]}}
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="lab_project" data-bs-parent="#accordionExample">
+            <div id={{p["title"]}} class="accordion-collapse collapse" aria-labelledby="lab_project" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <strong>Description: </strong> {{p["project_description"]}}
               </div>
