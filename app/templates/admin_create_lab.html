@@ -3,61 +3,80 @@
 
 <head>
     <title>Admin Create Lab</title>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
-</head>
-
-<body>
-    <h1>admin create lab</h1>
-    {% if message %}
-            <p><strong>message: </strong> {{ message }}
-    {% endif %}
-
-    <form action="" method="post">
-        <dl>
-        <dt>Lab Name:</dt>
-        <dd>
-                <input type="text" name="lab_name" 
-                value="{{ request.form.lab_name }}">
-        </dd>
-
-        <dt>Lab Description:</dt>
-        <dd>
-                <input type="text" name="lab_description" 
-                value="{{ request.form.lab_description }}">
-        </dd>
-
-        <dt>Website:</dt>
-        <dd>
-                <input type="text" name="website" 
-                value="{{ request.form.website }}">
-        </dd>
-
-        <dt>Recruiting Status (1 if recruiting, 0 if not):</dt>
-        <dd>
-                <input type="number" name="recruiting_status"  min="0" max="1" 
-                value="{{ request.form.recruiting_status }}">
-        </dd>
-
-        <dt>Department:</dt>
-        <dd>
-                <input type="text" name="department" 
-                value="{{ request.form.department }}">
-        </dd>
-
-        <dt>Building Name:</dt>
-        <dd>
-                <input type="text" name="building_name" 
-                value="{{ request.form.building_name }}">
-        </dd>
-
-        </dl>
-        <p><input type="submit" value="Create"></p>
-    </form>
-
-    <a href="{{ url_for('admin') }}"><button>Back to Admin main page</button></a>
-
-    <a href="{{ url_for('index') }}"><button>Back to main page</button></a>
-
-</body>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='new_style.css')}}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <img class="navbar-brand" src='/static/husky.png'></img>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('admin') }}">Back to Administrator main page</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Back to main page</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    
+        <div class="middle">
+                <h1>Administrator Create Lab</h1>
+                {% if message %}
+                        <p><strong>message: </strong> {{ message }}
+                {% endif %}
+            
+                <form action="" method="post">
+                    <dl>
+                    <dt>Lab Name:</dt>
+                    <dd>
+                            <input type="text" name="lab_name" 
+                            value="{{ request.form.lab_name }}">
+                    </dd>
+            
+                    <dt>Lab Description:</dt>
+                    <dd>
+                            <input type="text" name="lab_description" 
+                            value="{{ request.form.lab_description }}">
+                    </dd>
+            
+                    <dt>Website:</dt>
+                    <dd>
+                            <input type="text" name="website" 
+                            value="{{ request.form.website }}">
+                    </dd>
+            
+                    <dt>Recruiting Status (1 if recruiting, 0 if not):</dt>
+                    <dd>
+                            <input type="number" name="recruiting_status"  min="0" max="1" 
+                            value="{{ request.form.recruiting_status }}">
+                    </dd>
+            
+                    <dt>Department:</dt>
+                    <dd>
+                            <input type="text" name="department" 
+                            value="{{ request.form.department }}">
+                    </dd>
+            
+                    <dt>Building Name:</dt>
+                    <dd>
+                            <input class="margin-bottom" type="text" name="building_name" 
+                            value="{{ request.form.building_name }}">
+                    </dd>
+            
+                    </dl>
+                    <p><input type="submit" value="Create"></p>
+                </form>
+    </div>
+    </body>
 
 </html>

@@ -1,0 +1,27 @@
+.btn {
+    padding: 12px 16px !important;
+    margin-bottom: 20px;
+}
+
+.middle {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    text-align: center;
+}
+.nav-link:hover {
+    color: rgb(164,128,74) !important;
+}
+img {
+    height: 50px;
+    width: 35px;
+}
+.margin-bottom {
+    margin-bottom: 16px;
+}
+
+.standard-pad {
+    padding: 12px 16px !important;
+}

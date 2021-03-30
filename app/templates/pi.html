@@ -12,6 +12,9 @@
         .center {
             text-align: center !important;
         }
+        .card:hover {
+          background-color: rgb(211,211,211);
+        }
 
         /* Style page content */
         .main {
@@ -23,6 +26,7 @@
             background-color: rgb(211,211,211);
             text-align: center !important;
             margin-bottom: 16px !important;
+            padding-bottom: 16px;
         }
 
         .row {
@@ -105,7 +109,7 @@
     <p style = "color:green"> <b> Recruiting </b> </p>
 
     {%else%}
-    <p style = "color:red"> <b> Not Recruiting </b>  no  </p>
+    <p style = "color:red"> <b> Not Recruiting </b>   </p>
     {%endif%}
     <p> <b> Department </b>  {{row["department"]}}  </p>
     <p> <b> Building </b>  {{row["building_name"]}}  </p>
@@ -150,8 +154,8 @@
         <div class="card-body">
           <h5 class="card-title">{{pb["title"]}}</h5>
           <h6 class="card-subtitle mb-2 text-muted"> doi: {{pb["doi"]}} </h6>
-          <p class="card-text"> <b>Publish Date</b> {{pb["publish_date"]}} </p>
-          <p class="card-text"> <b>Journal</b> {{pb["journal"]}} </p>
+          <p class="card-text"> <b>Publish Date: </b> {{pb["publish_date"]}} </p>
+          <p class="card-text"> <b>Journal: </b> {{pb["journal"]}} </p>
         </div>
       </div>
     <br>
@@ -161,11 +165,26 @@
 <hr>
 
 <div id = "member">
-    <h2> Member </h2>
-    {% for m in member %}
-    <p><b> Username </b> {{m["username"]}}</p>
-    <p><b> Project </b> {{m["title"]}}</p>
-    {% endfor %}
+    <h2> Members </h2>
+    
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Username</th>
+          <th scope="col">Project</th>
+        </tr>
+      </thead>
+
+      {% for m in members %}
+      <tbody>
+        <tr>
+          <td>{{m["username"]}}</td>
+          <td>{{m["title"]}}</td>
+        </tr>
+      </tbody>
+      {% endfor %}
+    </table>
+    
 </div>
 </body>
 </div>

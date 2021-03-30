@@ -198,7 +198,6 @@ def pi_get_lab_info(username) -> tuple:
 
     cnx.close()
     return rows_lab, rows_college, rows_project, rows_publication, rows_member
-print(pi_get_lab_info('c.riedl')[4])
 
 def pi_create_project(title, project_description, username) -> str:
     """
@@ -359,7 +358,7 @@ def admin_check_valid_username(username) -> bool:
     return valid_username
 
 
-def admin_get_lab_info(username) -> list:
+def admin_get_lab_info(username) -> tuple:
     """
     Return the information related to all labs associated with an Admin's college
     """
@@ -369,9 +368,13 @@ def admin_get_lab_info(username) -> list:
     cur.callproc("get_labs", args=(username,))
     rows = cur.fetchall()
 
+    stmt = "select college_name from administrator a where a.username = '{}'".format(username)
+    cur.execute(stmt)
+    rows_college = cur.fetchone()
+    college = rows_college['college_name']
     cnx.close()
-    return rows
-
+    return rows, college
+print(admin_get_lab_info('c.brodley')[1])
 
 def admin_create_lab(lab_name, lab_description, website, recruiting_status, department, building_name, username) -> str:
     """

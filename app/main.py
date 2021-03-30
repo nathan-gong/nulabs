@@ -21,8 +21,8 @@ def pi():
 
 @app.route('/admin')
 def admin():
-    data = admin_get_lab_info(admin_username)
-    return render_template("admin.html", data=data)
+    data, college_name = admin_get_lab_info(admin_username)
+    return render_template("admin.html", data=data, username=admin_username, college_name=college_name)
 
 # Background processes
 
@@ -53,7 +53,7 @@ def student():
                         request.form['last_name'], request.form['degree_level'], request.form['lab_name']]
         message = student_apply_to_lab(*student_info)
 
-    data = student_get_all_labs(10)
+    data = student_get_all_labs(60)
     return render_template("student.html", message=message, data=data)
 
 @app.route('/pi/create_project', methods=['GET', 'POST'])
