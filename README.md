@@ -1,4 +1,4 @@
-# nulabs
+# NULabs
 
 CS3200 Database Design Final Project. _Northeastern University Spring 2021_
 
@@ -23,6 +23,7 @@ To run this application on your local machine, please complete the following ste
 ###### Machine Specifications
 
     - Computer running Python 3.7.x+
+    - MySQL DBMS
     - Text or code editor
     - Web browser
 
