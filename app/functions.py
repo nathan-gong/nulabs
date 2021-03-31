@@ -55,7 +55,8 @@ def check_project_in_pi_lab(title, username) -> bool:
         row_project_lab = cur.fetchone()
         project_lab_name = row_project_lab['lab_name']
         project_in_pi_lab = (lab_name == project_lab_name)
-    except Exception:
+    except Exception as e:
+        print(e)
         project_in_pi_lab = False
 
     cnx.close()
@@ -76,7 +77,8 @@ def check_building_in_admin_college(building_name, username) -> bool:
         admin_building_names = [row["building_name"].lower() for row in rows]
         print(admin_building_names)
         building_in_admin_college = (building_name.lower() in admin_building_names)
-    except Exception:
+    except Exception as e:
+        print(e)
         building_in_admin_college = False
 
     cnx.close()
@@ -127,7 +129,8 @@ def student_apply_to_lab(username, first_name, last_name, degree_level, lab_name
         else:
             result += "{} was not successfully added to {}".format(
                 username, lab_name)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "{} was not successfully added to {}".format(
             username, lab_name)
 
@@ -147,11 +150,14 @@ def pi_check_valid_username(username) -> bool:
     cnx = connect_to_db()
     cur = cnx.cursor()
 
-    stmt = "select username from pi"
-    cur.execute(stmt)
-    rows = cur.fetchall()
-    names = [row["username"].lower() for row in rows]
-    valid_username = username.lower() in names
+    try:
+        stmt = "select username from pi"
+        cur.execute(stmt)
+        rows = cur.fetchall()
+        names = [row["username"].lower() for row in rows]
+        valid_username = username.lower() in names
+    except Exception as e:
+        print(e)
 
     cnx.close()
     return valid_username
@@ -166,23 +172,26 @@ def pi_get_lab_info(username) -> tuple:
     cur = cnx.cursor()
     cur2 = cnx.cursor()
 
-    stmt_lab = "select * from lab l where l.lab_name = get_lab('{}')".format(
-        username)
-    cur.execute(stmt_lab)
-    rows_lab = cur.fetchall()
+    try:
+        stmt_lab = "select * from lab l where l.lab_name = get_lab('{}')".format(
+            username)
+        cur.execute(stmt_lab)
+        rows_lab = cur.fetchall()
 
-    stmt_college = "select get_college('{}') AS college_name".format(username)
-    cur2.execute(stmt_college)
-    rows_college = cur2.fetchall()
+        stmt_college = "select get_college('{}') AS college_name".format(username)
+        cur2.execute(stmt_college)
+        rows_college = cur2.fetchall()
 
-    cur.callproc("pi_projects", args=(username,))
-    rows_project = cur.fetchall()
+        cur.callproc("pi_projects", args=(username,))
+        rows_project = cur.fetchall()
 
-    cur.callproc("pi_publication", args=(username,))
-    rows_publication = cur.fetchall()
+        cur.callproc("pi_publication", args=(username,))
+        rows_publication = cur.fetchall()
 
-    cur.callproc("pi_labmember", args=(username,))
-    rows_member = cur.fetchall()
+        cur.callproc("pi_labmember", args=(username,))
+        rows_member = cur.fetchall()
+    except Exception as e:
+        print(e)
 
     cnx.close()
     return rows_lab, rows_college, rows_project, rows_publication, rows_member
@@ -205,7 +214,8 @@ def pi_create_project(title, project_description, username) -> str:
         cur.callproc("create_project", args=(
             title, project_description, lab_name))
         result += "{} was successfully created".format(title)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "{} was not successfully created".format(title)
 
     cnx.close()
@@ -229,7 +239,8 @@ def pi_update_project_description(title, project_description, username) -> str:
         else:
             result += "{} is not a project associated with your lab".format(
                 title)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "Did not successfully update description of {}".format(title)
 
     cnx.close()
@@ -252,7 +263,8 @@ def pi_add_lab_member(title, s_username, p_username) -> str:
         else:
             result += "{} is not a project associated with your lab".format(
                 title)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "Did not successfully add {} to {}".format(s_username, title)
 
     cnx.close()
@@ -276,7 +288,8 @@ def pi_delete_lab_member(title, s_username, p_username) -> str:
         else:
             result += "{} is not a project associated with your lab".format(
                 title)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "Did not successfully remove {} from {}".format(
             s_username, title)
 
@@ -302,7 +315,8 @@ def pi_publish_project(doi, publication_title, publish_date, journal, project_ti
         else:
             result += "{} is not a project associated with your lab".format(
                 project_title)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "Did not successfully add {} to {}".format(
             publication_title, project_title)
 
@@ -327,7 +341,8 @@ def pi_delete_project(title, username) -> str:
         else:
             result += "{} is not a project associated with your lab".format(
                 title)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "Did not successfully delete {}".format(title)
 
     cnx.close()
@@ -346,11 +361,14 @@ def admin_check_valid_username(username) -> bool:
     cnx = connect_to_db()
     cur = cnx.cursor()
 
-    stmt = "select username from administrator"
-    cur.execute(stmt)
-    rows = cur.fetchall()
-    names = [row["username"].lower() for row in rows]
-    valid_username = username.lower() in names
+    try:
+        stmt = "select username from administrator"
+        cur.execute(stmt)
+        rows = cur.fetchall()
+        names = [row["username"].lower() for row in rows]
+        valid_username = username.lower() in names
+    except Exception as e:
+        print(e)
 
     cnx.close()
     return valid_username
@@ -363,14 +381,18 @@ def admin_get_lab_info(username) -> tuple:
     cnx = connect_to_db()
     cur = cnx.cursor()
 
-    cur.callproc("get_labs", args=(username,))
-    rows = cur.fetchall()
+    try:
+        cur.callproc("get_labs", args=(username,))
+        rows = cur.fetchall()
 
-    stmt = "select college_name from administrator a where a.username = '{}'".format(
-        username)
-    cur.execute(stmt)
-    rows_college = cur.fetchone()
-    college = rows_college['college_name']
+        stmt = "select college_name from administrator a where a.username = '{}'".format(
+            username)
+        cur.execute(stmt)
+        rows_college = cur.fetchone()
+        college = rows_college['college_name']
+    except Exception as e:
+        print(e)
+    
     cnx.close()
     return rows, college
 
@@ -393,7 +415,8 @@ def admin_create_lab(lab_name, lab_description, website, recruiting_status, depa
         else:
             result += "{} is not a building associated with your college".format(
                 building_name)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "Did not successfully create {}".format(lab_name)
 
     cnx.close()
@@ -419,7 +442,8 @@ def admin_update_building_street(building_name, street, username) -> str:
         else:
             result += "{} is not a building associated with your college".format(
                 building_name)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "Did not successfully update {} street to {}".format(
             building_name, street)
 
@@ -439,7 +463,8 @@ def admin_create_building(building_name, street, username) -> str:
         cur.callproc("create_lab_building", args=(
             building_name, street, username))
         result += "{} was successfully created".format(building_name)
-    except Exception:
+    except Exception as e:
+        print(e)
         result += "{} was not successfully created".format(building_name)
 
     cnx.close()
