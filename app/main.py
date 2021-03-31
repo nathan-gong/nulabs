@@ -4,9 +4,6 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 app = Flask(__name__)
 app.secret_key = "super-duper secret key"
 
-pi_username = None
-admin_username = None
-
 
 # Render HTML pages
 
@@ -60,7 +57,7 @@ def student():
                         request.form['last_name'], request.form['degree_level'], request.form['lab_name']]
         message = student_apply_to_lab(*student_info)
 
-    data = student_get_all_labs(60)
+    data = student_get_all_labs()
     return render_template("student.html", message=message, data=data)
 
 

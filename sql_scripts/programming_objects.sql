@@ -129,7 +129,7 @@ delimiter ;
 delimiter $$
 CREATE PROCEDURE delete_project(IN project_title VARCHAR(256))
 BEGIN
-	DELETE FROM project WHERE project.title = project_title;
+	DELETE FROM project p WHERE p.title = project_title;
 END $$
 delimiter ;
 
@@ -138,7 +138,7 @@ CREATE TRIGGER deleted_project AFTER DELETE ON project
 FOR EACH ROW
 BEGIN
 
-DELETE FROM conducts WHERE conduct.title = OLD.title;
+DELETE FROM conducts WHERE conducts.title = OLD.title;
 DELETE FROM results_in WHERE results_in.title = OLD.title;
 
 END $$
@@ -198,6 +198,6 @@ CREATE PROCEDURE create_lab_building(IN building_name VARCHAR(255), IN street VA
 	
     SELECT college_name FROM administrator a WHERE a.username = username INTO admin_college;
     
-    INSERT INTO building values (building_name, street, college_name);
+    INSERT INTO building values (building_name, street, admin_college);
 	END $$
 delimiter ;

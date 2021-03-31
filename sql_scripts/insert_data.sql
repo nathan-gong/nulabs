@@ -106,7 +106,7 @@ INSERT INTO lab values ('Global Resilience Institute', 'The Global Resilience In
 INSERT INTO lab values ('Humanities Center', 'Through unique programming and research initiatives, the Humanities Center fosters collaboration and conversation on the significance of history, literature, and culture.', 'https://cssh.northeastern.edu/humanities/', '0', 'History', 'Renaissance Park');
 INSERT INTO lab values ('Social Impact Lab', 'We develop experiential learning models to support our mission of preparing students for lives of purpose as ethical and effective citizen-leaders and social change agents.', 'https://cssh.northeastern.edu/impactlab/', '1', 'Human Services', 'Renaissance Park');
 INSERT INTO lab values ('Ondrechen Lab', 'Our work spans the areas of theoretical and computational chemistry, computational biology, bioinformatics, protein design, and drug discovery.', 'http://www.northeastern.edu/org/', '0', 'Biochemistry', 'Mugar Life Sciences Building');
-INSERT INTO lab values ('Pinto Lab', 'We investigate microbial ecosystems at the interface of infrastructure and public / environmental health with a  focus on the engineered water cycle. Our goal is to characterize and manipulate microbial communities to (1) protect and improve public and environmental health and (2) improve functional reliability and economic feasibility of water infrastructure.', 'https://www.pintolab.com/', '1', 'civil engineering', 'Mugar Life Sciences Building');  
+INSERT INTO lab values ('Pinto Lab', 'We investigate microbial ecosystems at the interface of infrastructure and public / environmental health with a focus on the engineered water cycle. Our goal is to characterize and manipulate microbial communities to (1) protect and improve public and environmental health and (2) improve functional reliability and economic feasibility of water infrastructure.', 'https://www.pintolab.com/', '1', 'Civil Engineering', 'Mugar Life Sciences Building');  
 
 
 INSERT INTO lab_member values ('A.Gates', 'Alexander', 'Gates', 'Faculty', 'Center for Complex Network Research');
@@ -250,7 +250,7 @@ INSERT INTO project values ('Modeling networks and network dynamics', 'nan', 'Af
 INSERT INTO project values ('Neural basis of affective experience', 'nan', 'Affective and Brain Sciences Lab');
 INSERT INTO project values ('Cognitive control in social and affective neuroscience', 'nan', 'Affective and Brain Sciences Lab');
 INSERT INTO project values ('Concepts and Emotion', 'nan', 'Affective and Brain Sciences Lab');
-INSERT INTO project values ('Examining how the braing regulates aging and resilience to stress', 'We use the nematode C. elegans as a tractable model organism to investigate how the brain regulates aging and resilience at cellular, tissue, and organismic levels.', 'Apfeld Lab');
+INSERT INTO project values ('Examining how the brain regulates aging and resilience to stress', 'We use the nematode C. elegans as a tractable model organism to investigate how the brain regulates aging and resilience at cellular, tissue, and organismic levels.', 'Apfeld Lab');
 INSERT INTO project values ('Persisters', 'Persisters are dormant variants of regular cells which are tolerant to antibiotics and responsible for recalcitrance of a variety of chronic infections, including tuberculosis and those caused by microbial biofilms. We identified a number of mechanisms for persister formation, and the first compound that kills them, acyldepsipeptide.', 'Lewis Lab');
 INSERT INTO project values ('Uncultured Bacteria', 'Uncultured bacteria make up the majority of species on the planet, but do not grow in the lab. We developed a general method to grow these organisms by cultivation in their natural environment. In marine sediment, siderophores from neighbors serve as growth factors for uncultured bacteria. We have recently identified growth factors for uncultured bacteria from the human microbiome. We also use uncultured bacteria as a source for discovering new antibiotics.', 'Lewis Lab');
 INSERT INTO project values ('Lyme Disease', 'Our goal is to understand the nature of PTLDS (Chronic Lyme Disease) and identify treatments for this debilitating condition. We are conducting experiments to understand the nature of persistence in Borrelia burgdorferi, and have a high-throughput drug discovery program to identify novel antimicrobials with potent and specific activity against the pathogen.', 'Lewis Lab');
@@ -521,11 +521,11 @@ INSERT INTO results_in values ('Concepts and Emotion', '10.1016/j.tics.2019.07.0
 INSERT INTO results_in values ('Concepts and Emotion', '10.1093/scan/nsw121');
 INSERT INTO results_in values ('Concepts and Emotion', '10.1371/journal.pcbi.1004066');
 INSERT INTO results_in values ('Concepts and Emotion', '10.1177/0963721414553440');
-INSERT INTO results_in values ('Examining how the braing regulates aging and resilience to stress', '10.1038/s41598-020-73987-0');
-INSERT INTO results_in values ('Examining how the braing regulates aging and resilience to stress', '10.1016/j.tma.2020.07.002');
-INSERT INTO results_in values ('Examining how the braing regulates aging and resilience to stress', '10.7554/eLife.56186');
-INSERT INTO results_in values ('Examining how the braing regulates aging and resilience to stress', '10.1007/978-1-4939-7471-9_4');
-INSERT INTO results_in values ('Examining how the braing regulates aging and resilience to stress', '10.3390/biology7010001');
+INSERT INTO results_in values ('Examining how the brain regulates aging and resilience to stress', '10.1038/s41598-020-73987-0');
+INSERT INTO results_in values ('Examining how the brain regulates aging and resilience to stress', '10.1016/j.tma.2020.07.002');
+INSERT INTO results_in values ('Examining how the brain regulates aging and resilience to stress', '10.7554/eLife.56186');
+INSERT INTO results_in values ('Examining how the brain regulates aging and resilience to stress', '10.1007/978-1-4939-7471-9_4');
+INSERT INTO results_in values ('Examining how the brain regulates aging and resilience to stress', '10.3390/biology7010001');
 INSERT INTO results_in values ('Lyme Disease', '10.1128/mBio.02310-20');
 INSERT INTO results_in values ('Uncultured Bacteria', '10.1128/mBio.01516-20');
 INSERT INTO results_in values ('Drug Discovery', '10.1016/j.cell.2020.02.056');
@@ -634,14 +634,14 @@ INSERT INTO conducts values ('E.Diederich', 'Examining functional activity in hu
 INSERT INTO conducts values ('I.Korogodsky', 'Modeling networks and network dynamics', 'Affective and Brain Sciences Lab');
 INSERT INTO conducts values ('N.Chaudhary', 'Neural basis of affective experience', 'Affective and Brain Sciences Lab');
 INSERT INTO conducts values ('L.Christenson', 'Cognitive control in social and affective neuroscience', 'Affective and Brain Sciences Lab');
-INSERT INTO conducts values ('J.Apfeld', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO conducts values ('J.Norris', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO conducts values ('F.Servello', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO conducts values ('Y.Xu', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO conducts values ('S.Stumbur', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO conducts values ('N.Patel', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO conducts values ('A.Lindberg', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
-INSERT INTO conducts values ('N.Gong', 'Examining how the braing regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('J.Apfeld', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('J.Norris', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('F.Servello', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('Y.Xu', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('S.Stumbur', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('N.Patel', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('A.Lindberg', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
+INSERT INTO conducts values ('N.Gong', 'Examining how the brain regulates aging and resilience to stress', 'Apfeld Lab');
 INSERT INTO conducts values ('P.Beuning', 'Persisters', 'Lewis Lab');
 INSERT INTO conducts values ('P.Beuning', 'Uncultured Bacteria', 'Lewis Lab');
 INSERT INTO conducts values ('P.Beuning', 'Lyme Disease', 'Lewis Lab');

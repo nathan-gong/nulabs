@@ -44,7 +44,7 @@ def check_project_in_pi_lab(title, username) -> bool:
     project_in_pi_lab = None
 
     try:
-        stmt = "select get_lab('{}')".format(username)
+        stmt = "select get_lab('{}') as lab_name".format(username)
         cur.execute(stmt)
         row = cur.fetchone()
         lab_name = row['lab_name']
@@ -74,7 +74,8 @@ def check_building_in_admin_college(building_name, username) -> bool:
         cur.callproc("get_admin_building_names", args=(username,))
         rows = cur.fetchall()
         admin_building_names = [row["building_name"].lower() for row in rows]
-        building_in_admin_college = (building_name in admin_building_names)
+        print(admin_building_names)
+        building_in_admin_college = (building_name.lower() in admin_building_names)
     except Exception:
         building_in_admin_college = False
 
@@ -196,7 +197,7 @@ def pi_create_project(title, project_description, username) -> str:
     result = ""
 
     try:
-        stmt = "select get_lab('{}')".format(username)
+        stmt = "select get_lab('{}') as lab_name".format(username)
         cur.execute(stmt)
         row = cur.fetchone()
         lab_name = row['lab_name']
@@ -321,7 +322,7 @@ def pi_delete_project(title, username) -> str:
 
     try:
         if project_in_lab:
-            cur.callproc("delete_project", args=(title))
+            cur.callproc("delete_project", args=(title,))
             result += "Successfully deleted {}".format(title)
         else:
             result += "{} is not a project associated with your lab".format(

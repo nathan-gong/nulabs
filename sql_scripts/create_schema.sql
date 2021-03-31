@@ -36,7 +36,7 @@ CREATE TABLE lab (
     building_name VARCHAR(255) NOT NULL,
     FOREIGN KEY (building_name)
         REFERENCES building (building_name)
-        ON UPDATE CASCADE ON DELETE CASCADE
+        ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
 CREATE TABLE lab_member (
@@ -71,7 +71,7 @@ CREATE TABLE pi (
     lab_name VARCHAR(255) NOT NULL,
     FOREIGN KEY (username)
         REFERENCES lab_member (username)
-        ON UPDATE CASCADE ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (lab_name)
         REFERENCES lab (lab_name)
         ON UPDATE CASCADE ON DELETE RESTRICT
@@ -84,10 +84,10 @@ CREATE TABLE results_in (
     doi VARCHAR(128) NOT NULL,
     FOREIGN KEY (title)
         REFERENCES project (title)
-        ON UPDATE CASCADE ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (doi)
         REFERENCES publication (doi)
-        ON UPDATE CASCADE ON DELETE RESTRICT
+        ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE conducts (
@@ -96,10 +96,10 @@ CREATE TABLE conducts (
     lab_name VARCHAR(255) NOT NULL,
     FOREIGN KEY (username)
         REFERENCES lab_member (username)
-        ON UPDATE CASCADE ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (title)
         REFERENCES project (title)
-        ON UPDATE CASCADE ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (lab_name)
         REFERENCES lab (lab_name)
         ON UPDATE CASCADE ON DELETE RESTRICT
