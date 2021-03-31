@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS nulabs;
 USE nulabs;
 
 -- Entity Tables
-SELECT * FROM pi;
+
 CREATE TABLE college (
     college_name VARCHAR(16) PRIMARY KEY
 );

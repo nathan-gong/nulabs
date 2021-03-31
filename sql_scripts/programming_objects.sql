@@ -1,19 +1,8 @@
+# Programming objects
+
 USE nulabs;
 
 -- STUDENT
-delimiter $$
-CREATE FUNCTION check_status(lab_name VARCHAR(255))
-	RETURNS TINYINT
-    DETERMINISTIC
-    CONTAINS SQL 
-    READS SQL DATA
-    
-	BEGIN
-	DECLARE recruiting TINYINT;
-	SELECT recruiting_status FROM lab l WHERE l.lab_name = lab_name INTO recruiting;
-	RETURN recruiting;
-	END $$
-delimiter ;
 
 delimiter $$
 CREATE PROCEDURE add_student(IN username VARCHAR(255), IN first_name varchar(255), IN last_name VARCHAR(255), IN degree_level VARCHAR(64), IN lab_name VARCHAR(255))
@@ -23,12 +12,6 @@ END $$
 delimiter ;
 
 -- PI
-delimiter $$
-CREATE PROCEDURE pi_users()    
-	BEGIN
-	SELECT username FROM pi;
-	END $$
-delimiter ;
 
 delimiter $$
 CREATE FUNCTION get_lab(username VARCHAR(255))
@@ -43,17 +26,6 @@ CREATE FUNCTION get_lab(username VARCHAR(255))
         RETURN pi_lab;
     END $$ 
 delimiter;
-
-delimiter $$
-CREATE PROCEDURE pi_lab_info(IN username VARCHAR(255))
-	BEGIN
-		DECLARE pi_lab VARCHAR(255);
-		SELECT get_lab(username) INTO pi_lab;
-        
-        SELECT * FROM lab l WHERE l.lab_name = pi_lab;
-	END $$
-delimiter ;
-
 
 delimiter $$
 CREATE FUNCTION get_college(username VARCHAR(255))
@@ -93,7 +65,6 @@ CREATE PROCEDURE pi_publication(IN username VARCHAR(255))
 			(SELECT title FROM project p WHERE p.lab_name = pi_lab));
 	END $$
 delimiter ;
-
 
 delimiter $$
 CREATE PROCEDURE pi_labmember(IN username VARCHAR(255))
@@ -174,12 +145,6 @@ END $$
 delimiter ;
 
 -- ADMIN
-delimiter $$
-CREATE PROCEDURE admin_users()    
-	BEGIN
-	SELECT username FROM administrator;
-	END $$
-delimiter ;
 
 delimiter $$
 CREATE PROCEDURE get_labs(IN username VARCHAR(255))
@@ -187,7 +152,7 @@ CREATE PROCEDURE get_labs(IN username VARCHAR(255))
 	DECLARE admin_college VARCHAR(255);
     
 	SELECT college_name FROM administrator a WHERE a.username = username INTO admin_college;
-	SELECT l.* FROM building b JOIN lab l ON b.building_name = l.building_name WHERE b.college_name = admin_college;
+	SELECT l.* FROM building b JOIN lab l ON b.building_name = l.building_name WHERE b.college_name = admin_college order by l.lab_name;
 
 	END $$
 delimiter ;

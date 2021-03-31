@@ -1,5 +1,5 @@
 # Insert data into the schema
-#DROP DATABASE nulabs;
+
 USE nulabs;
 
 INSERT INTO college values ('Khoury');
@@ -7,8 +7,8 @@ INSERT INTO college values ('COS');
 INSERT INTO college values ('COE');
 INSERT INTO college values ('DMSB');
 INSERT INTO college values ('Bouve');
-INSERT INTO college values ('CSSH');
-SELECT * FROM college;    
+INSERT INTO college values ('CSSH'); 
+
 
 INSERT INTO administrator values ('g.abowd', 'COE');
 INSERT INTO administrator values ('c.brodley', 'Khoury');
@@ -16,7 +16,7 @@ INSERT INTO administrator values ('r.echambadi', 'DMSB');
 INSERT INTO administrator values ('h.sive', 'COS');
 INSERT INTO administrator values ('u.poiger', 'CSSH');
 INSERT INTO administrator values ('c.sceppa', 'Bouve');
-SELECT * FROM administrator;
+
 
 INSERT INTO building values ('177 Huntington', '177 Huntington Avenue', 'Khoury');
 INSERT INTO building values ('West Village H', '440 Huntington Avenue', 'Khoury');
@@ -36,8 +36,6 @@ INSERT INTO building values ('Hayden Hall', '360 Huntington Avenue', 'DMSB');
 INSERT INTO building values ('Behrakis Health Sciences Center', '30 Leon Street', 'Bouve');
 INSERT INTO building values ('Renaissance Park', '1135 Tremont Street', 'CSSH');
 INSERT INTO building values ('Churchill Hall', '380 Huntington Avenue', 'CSSH');
-SELECT * FROM building;
-
 
 
 INSERT INTO lab values ('Center for Complex Network Research', 'Investigates how networks emerge, what they look like, how they evolve and more. ', 'https://www.barabasilab.com/', '1', 'Computer Science', '177 Huntington');
@@ -109,7 +107,7 @@ INSERT INTO lab values ('Humanities Center', 'Through unique programming and res
 INSERT INTO lab values ('Social Impact Lab', 'We develop experiential learning models to support our mission of preparing students for lives of purpose as ethical and effective citizen-leaders and social change agents.', 'https://cssh.northeastern.edu/impactlab/', '1', 'Human Services', 'Renaissance Park');
 INSERT INTO lab values ('Ondrechen Lab', 'Our work spans the areas of theoretical and computational chemistry, computational biology, bioinformatics, protein design, and drug discovery.', 'http://www.northeastern.edu/org/', '0', 'Biochemistry', 'Mugar Life Sciences Building');
 INSERT INTO lab values ('Pinto Lab', 'We investigate microbial ecosystems at the interface of infrastructure and public / environmental health with a  focus on the engineered water cycle. Our goal is to characterize and manipulate microbial communities to (1) protect and improve public and environmental health and (2) improve functional reliability and economic feasibility of water infrastructure.', 'https://www.pintolab.com/', '1', 'civil engineering', 'Mugar Life Sciences Building');  
-SELECT * FROM lab;
+
 
 INSERT INTO lab_member values ('A.Gates', 'Alexander', 'Gates', 'Faculty', 'Center for Complex Network Research');
 INSERT INTO lab_member values ('D.Gysi', 'Deisy', 'Gysi', 'Faculty', 'Center for Complex Network Research');
@@ -237,7 +235,7 @@ INSERT INTO lab_member values ('B.Gincley', 'Benjamin', 'Gincley', 'PhD', 'Pinto
 INSERT INTO lab_member values ('C.Anderson', 'Christopher', 'Anderson', 'Post-doc', 'Pinto Lab');
 INSERT INTO lab_member values ('L.Huo', 'Linxuan', 'Huo', 'PhD', 'Pinto Lab');
 INSERT INTO lab_member values ('C.Mboijana', 'Cole', 'Mboijana', 'Undergrad', 'Pinto Lab');
-SELECT * FROM lab_member;
+
 
 INSERT INTO project values ('Center for Complex Network Research', 'investigates how networks emerge, what they look like, how they evolve and more. ', 'Center for Complex Network Research');
 INSERT INTO project values ('Cognitive Embodied Social Agents Research (CESAR) Lab', 'Works on computational modeling of human behavior for study and education and analysis applications', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
@@ -297,7 +295,7 @@ INSERT INTO project values ('Time-series observations', "We use a  time-series f
 INSERT INTO project values ('Designing microbiomes', "Desigining  the microbial community on filters is a rational strategy for managing consumer exposure to drinking water microbes. Our approach is to  develop metabolic model informed process strategies to actively shape the structure and function of microorganisms in biofiltration systems.", 'Pinto Lab');
 INSERT INTO project values ('Cataloguing membership', "We are developing a genomic catalogue of microorganisms observed in drinking water systems and their metabolic potentials. This will enable an improved understanding of the impact of drinking water microbes on infrastructure and health.", 'Pinto Lab');
 INSERT INTO project values ('Model community', "Aerobic nitrification is an important biological process in engineered water systems, including drinking water systems. Aerobic nitrifiers can also serve as an ideal model community to investigate ecological processes governing microbial community assembly.", 'Pinto Lab');
-SELECT * FROM project;
+
 
 INSERT INTO publication values ('10.1145/2488388.2488435', 'Measuring Personalization of Web Search', 2013, 'Association for Computing Machinery');
 INSERT INTO publication values ('10.1145/2815675.2815714', 'Location, Location, Location: The Impact of Geolocation on Web Search Personalization', 2015, 'Internet Measurement Conference');
@@ -458,7 +456,7 @@ INSERT INTO publication values ('10.1021/acs.est.0c01655', 'Impact of Hurricane 
 INSERT INTO publication values ('10.1128/mSphere.00274-20', 'Microbial nitrogen metabolism in chloraminated drinking water reservoirs', 2020, 'mSphere');
 INSERT INTO publication values ('10.1186/s40148-020-00813-0', 'Disinfection systematically impacts the drinking water microbiome', 2020, 'Microbiomes');
 INSERT INTO publication values ('10.1016/j.wateres.2019.11528', 'Long solids retention times and attached growth phase favor prevalence of comammox bacteria in nitrogen removal systems', 2019, 'Water Research');
-SELECT * FROM publication;
+
 
 INSERT INTO pi values ('A.Barab·si', 'Center for Complex Network Research');
 INSERT INTO pi values ('S.Marsella', 'Cognitive Embodied Social Agents Research (CESAR) Lab');
@@ -478,7 +476,7 @@ INSERT INTO pi values ('D.Cokely', 'Center for Atypical Language Interpreting');
 INSERT INTO pi values ('S.Flynn', 'Global Resilience Institute');
 INSERT INTO pi values ('M.Ondrechen', 'Ondrechen Lab');
 INSERT INTO pi values ('A.Pinto', 'Pinto Lab');
-SELECT * FROM pi;
+
 
 INSERT INTO results_in values ('Center for Complex Network Research', '10.1038/d41586-021-00314-6');
 INSERT INTO results_in values ('Center for Complex Network Research', '10.1038/s41598-020-80091-w');
@@ -592,7 +590,7 @@ INSERT INTO results_in values ('Designing microbiomes', '10.1016/j.wateres.2019.
 INSERT INTO results_in values ('Cataloguing membership', '10.3389/fmcib.2020.601864');
 INSERT INTO results_in values ('Cataloguing membership', '10.1128/mSphere.00274-20');
 INSERT INTO results_in values ('Model community', '10.1016/j.scitotenv.2020.141451');
-SELECT * FROM results_in;
+
 
 INSERT INTO conducts values ('A.Gates', 'Center for Complex Network Research', 'Center for Complex Network Research');
 INSERT INTO conducts values ('D.Gysi', 'Center for Complex Network Research', 'Center for Complex Network Research');
@@ -726,4 +724,3 @@ INSERT INTO conducts values ('C.Anderson', 'Designing microbiomes','Pinto Lab');
 INSERT INTO conducts values ('L.Huo', 'Cataloguing membership','Pinto Lab');
 INSERT INTO conducts values ('L.Huo', 'Time-series observations','Pinto Lab');
 INSERT INTO conducts values ('C.Mboijana', 'Time-series observations','Pinto Lab');
-SELECT * FROM conducts;

@@ -62,22 +62,6 @@ def check_project_in_pi_lab(title, username) -> bool:
     return project_in_pi_lab
 
 
-def get_building_names() -> list:
-    """
-    Get all building names at Northeastern
-    """
-    cnx = connect_to_db()
-    cur = cnx.cursor()
-
-    stmt = "select building_name from building"
-    cur.execute(stmt)
-    rows = cur.fetchall()
-    building_names = [row["building_name"].lower() for row in rows]
-
-    cnx.close()
-    return building_names
-
-
 def check_building_in_admin_college(building_name, username) -> bool:
     """
     Validate that the inputted building name is associated with the Admin's college
@@ -128,7 +112,7 @@ def student_apply_to_lab(username, first_name, last_name, degree_level, lab_name
 
     try:
         stmt = "select recruiting_status from lab where lab.lab_name = '{}'".format(
-        lab_name)
+            lab_name)
         cur.execute(stmt)
         row = cur.fetchone()
 
@@ -137,11 +121,14 @@ def student_apply_to_lab(username, first_name, last_name, degree_level, lab_name
         elif row['recruiting_status'] == 1:
             cur.callproc("add_student", args=(
                 username, first_name, last_name, degree_level, lab_name))
-            result += "{} was successfully added to {}".format(username, lab_name)
+            result += "{} was successfully added to {}".format(
+                username, lab_name)
         else:
-            result += "{} was not successfully added to {}".format(username, lab_name)
+            result += "{} was not successfully added to {}".format(
+                username, lab_name)
     except Exception:
-        result += "{} was not successfully added to {}".format(username, lab_name)
+        result += "{} was not successfully added to {}".format(
+            username, lab_name)
 
     cnx.close()
     return result
@@ -199,6 +186,7 @@ def pi_get_lab_info(username) -> tuple:
     cnx.close()
     return rows_lab, rows_college, rows_project, rows_publication, rows_member
 
+
 def pi_create_project(title, project_description, username) -> str:
     """
     Create a new project associated with a PI's lab
@@ -213,7 +201,8 @@ def pi_create_project(title, project_description, username) -> str:
         row = cur.fetchone()
         lab_name = row['lab_name']
 
-        cur.callproc("create_project", args=(title, project_description, lab_name))
+        cur.callproc("create_project", args=(
+            title, project_description, lab_name))
         result += "{} was successfully created".format(title)
     except Exception:
         result += "{} was not successfully created".format(title)
@@ -233,10 +222,12 @@ def pi_update_project_description(title, project_description, username) -> str:
 
     try:
         if project_in_lab:
-            cur.callproc("update_description", args=(title, project_description))
+            cur.callproc("update_description", args=(
+                title, project_description))
             result += "Successfully updated description of {}".format(title)
         else:
-            result += "{} is not a project associated with your lab".format(title)
+            result += "{} is not a project associated with your lab".format(
+                title)
     except Exception:
         result += "Did not successfully update description of {}".format(title)
 
@@ -258,7 +249,8 @@ def pi_add_lab_member(title, s_username, p_username) -> str:
             cur.callproc("add_member", args=(title, s_username, p_username))
             result += "Successfully added {} to {}".format(s_username, title)
         else:
-            result += "{} is not a project associated with your lab".format(title)
+            result += "{} is not a project associated with your lab".format(
+                title)
     except Exception:
         result += "Did not successfully add {} to {}".format(s_username, title)
 
@@ -278,11 +270,14 @@ def pi_delete_lab_member(title, s_username, p_username) -> str:
     try:
         if project_in_lab:
             cur.callproc("delete_member", args=(title, s_username, p_username))
-            result += "Successfully removed {} from {}".format(s_username, title)
+            result += "Successfully removed {} from {}".format(
+                s_username, title)
         else:
-            result += "{} is not a project associated with your lab".format(title)
+            result += "{} is not a project associated with your lab".format(
+                title)
     except Exception:
-        result += "Did not successfully remove {} from {}".format(s_username, title)
+        result += "Did not successfully remove {} from {}".format(
+            s_username, title)
 
     cnx.close()
     return result
@@ -307,7 +302,8 @@ def pi_publish_project(doi, publication_title, publish_date, journal, project_ti
             result += "{} is not a project associated with your lab".format(
                 project_title)
     except Exception:
-        result += "Did not successfully add {} to {}".format(publication_title, project_title)
+        result += "Did not successfully add {} to {}".format(
+            publication_title, project_title)
 
     cnx.close()
     return result
@@ -328,7 +324,8 @@ def pi_delete_project(title, username) -> str:
             cur.callproc("delete_project", args=(title))
             result += "Successfully deleted {}".format(title)
         else:
-            result += "{} is not a project associated with your lab".format(title)
+            result += "{} is not a project associated with your lab".format(
+                title)
     except Exception:
         result += "Did not successfully delete {}".format(title)
 
@@ -368,7 +365,8 @@ def admin_get_lab_info(username) -> tuple:
     cur.callproc("get_labs", args=(username,))
     rows = cur.fetchall()
 
-    stmt = "select college_name from administrator a where a.username = '{}'".format(username)
+    stmt = "select college_name from administrator a where a.username = '{}'".format(
+        username)
     cur.execute(stmt)
     rows_college = cur.fetchone()
     college = rows_college['college_name']
@@ -389,7 +387,7 @@ def admin_create_lab(lab_name, lab_description, website, recruiting_status, depa
     try:
         if building_in_college:
             cur.callproc("create_lab", args=(lab_name, lab_description,
-                        website, recruiting_status, department, building_name))
+                                             website, recruiting_status, department, building_name))
             result += "Successfully created {}".format(lab_name)
         else:
             result += "{} is not a building associated with your college".format(
@@ -414,7 +412,7 @@ def admin_update_building_street(building_name, street, username) -> str:
     try:
         if building_in_college:
             cur.callproc("update_lab_building_street",
-                        args=(building_name, street))
+                         args=(building_name, street))
             result += "Successfully updated {} street to {}".format(
                 building_name, street)
         else:
@@ -437,7 +435,8 @@ def admin_create_building(building_name, street, username) -> str:
     result = ""
 
     try:
-        cur.callproc("create_lab_building", args=(building_name, street, username))
+        cur.callproc("create_lab_building", args=(
+            building_name, street, username))
         result += "{} was successfully created".format(building_name)
     except Exception:
         result += "{} was not successfully created".format(building_name)
