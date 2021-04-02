@@ -23,10 +23,9 @@ def connect_to_db():
     Connect to the DB and return the Cursor
     """
     try:
-        cnx = pymysql.connect(host='localhost', user=db_username,
-                              password=db_password,
+        cnx = pymysql.connect(host='localhost', user=db_username, password=db_password,
                               db='nulabs', charset='utf8mb4',
-                              cursorclass=pymysql.cursors.DictCursor)
+                              cursorclass=pymysql.cursors.DictCursor, autocommit=True)
     except pymysql.err.OperationalError as e:
         if e.args[0] == 1045:
             print('Invalid credentials')
@@ -76,7 +75,8 @@ def check_building_in_admin_college(building_name, username) -> bool:
         rows = cur.fetchall()
         admin_building_names = [row["building_name"].lower() for row in rows]
         print(admin_building_names)
-        building_in_admin_college = (building_name.lower() in admin_building_names)
+        building_in_admin_college = (
+            building_name.lower() in admin_building_names)
     except Exception as e:
         print(e)
         building_in_admin_college = False
@@ -178,7 +178,8 @@ def pi_get_lab_info(username) -> tuple:
         cur.execute(stmt_lab)
         rows_lab = cur.fetchall()
 
-        stmt_college = "select get_college('{}') AS college_name".format(username)
+        stmt_college = "select get_college('{}') AS college_name".format(
+            username)
         cur2.execute(stmt_college)
         rows_college = cur2.fetchall()
 
@@ -392,7 +393,7 @@ def admin_get_lab_info(username) -> tuple:
         college = rows_college['college_name']
     except Exception as e:
         print(e)
-    
+
     cnx.close()
     return rows, college
 
