@@ -32,7 +32,7 @@ INSERT INTO building values ('Marine Science Center', '430 Nahant Road', 'COS');
 INSERT INTO building values ('Nightingale Hall', '105 Forsyth Street', 'COS');
 INSERT INTO building values ('Egan Research Center', '120 Forsyth Street', 'COS');
 INSERT INTO building values ('Hurtig Hall', '10 Gainsborough Street', 'COS');
-INSERT INTO building values ('Hayden Hall', '360 Huntington Avenue', 'DMSB');
+INSERT INTO building values ('Hayden Hall', '361 Huntington Avenue', 'DMSB');
 INSERT INTO building values ('Behrakis Health Sciences Center', '30 Leon Street', 'Bouve');
 INSERT INTO building values ('Renaissance Park', '1135 Tremont Street', 'CSSH');
 INSERT INTO building values ('Churchill Hall', '380 Huntington Avenue', 'CSSH');

@@ -10,7 +10,7 @@ import pymysql
 
 
 db_username = "root"
-db_password = "Nathangong12"
+db_password = "Emmyc2001"
 
 
 ##########

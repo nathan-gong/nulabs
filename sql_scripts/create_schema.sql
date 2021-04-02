@@ -1,6 +1,4 @@
 # Create Schema
-
-DROP DATABASE nulabs;
 CREATE DATABASE IF NOT EXISTS nulabs;
 USE nulabs;
 
