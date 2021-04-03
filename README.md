@@ -2,10 +2,12 @@
 
 CS3200 Database Design Final Project. _Northeastern University Spring 2021_
 
-<img src="https://user-images.githubusercontent.com/52764831/113491729-d68a5400-94a0-11eb-8bfa-6df7422232f0.jpg" width="200" height="150">
-<img src="https://user-images.githubusercontent.com/52764831/113491737-e6099d00-94a0-11eb-87cf-4f3c2c230b0c.jpg" width="200" height="150">
-<img src="https://user-images.githubusercontent.com/52764831/113491748-f457b900-94a0-11eb-81cf-f960276975a6.jpg" width="200" height="150">
-<img src="https://user-images.githubusercontent.com/52764831/113491752-fb7ec700-94a0-11eb-82eb-936cac1ecad2.jpg" width="200" height="150">
+<p float="left">
+    <img src="https://user-images.githubusercontent.com/52764831/113491729-d68a5400-94a0-11eb-8bfa-6df7422232f0.jpg" width="400" height="300">
+    <img src="https://user-images.githubusercontent.com/52764831/113491737-e6099d00-94a0-11eb-87cf-4f3c2c230b0c.jpg" width="400" height="300">
+    <img src="https://user-images.githubusercontent.com/52764831/113491748-f457b900-94a0-11eb-81cf-f960276975a6.jpg" width="400" height="300">
+    <img src="https://user-images.githubusercontent.com/52764831/113491752-fb7ec700-94a0-11eb-82eb-936cac1ecad2.jpg" width="400" height="300">
+</p>
 
 ### Instructions
 
