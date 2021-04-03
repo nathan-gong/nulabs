@@ -9,17 +9,16 @@
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
   <style>
-
     /* The alert message box */
-  .alert {
+    .alert {
       padding: 20px;
       background-color: rgb(56, 87, 117);
       color: white;
       margin-bottom: 15px;
-      }
-  
-      /* The close button */
-      .closebtn {
+    }
+
+    /* The close button */
+    .closebtn {
       margin-left: 15px;
       color: white;
       font-weight: bold;
@@ -28,13 +27,13 @@
       line-height: 20px;
       cursor: pointer;
       transition: 0.3s;
-      }
-  
-      /* When moving the mouse over the close button */
-      .closebtn:hover {
+    }
+
+    /* When moving the mouse over the close button */
+    .closebtn:hover {
       color: black;
-      }
-      
+    }
+
     .btn {
       background-color: rgb(212, 27, 44);
       padding: 12px 12px;
@@ -151,13 +150,13 @@
   <a href="{{ url_for('index') }}"><button>Home</button></a>
 
   {% if message %}
-    <div class="alert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      <strong>Message: </strong> {{ message }}
-    </div>
-    
-      {% endif %}
-      
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Message: </strong> {{ message }}
+  </div>
+
+  {% endif %}
+
 
 </div>
 

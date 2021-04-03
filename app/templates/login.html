@@ -8,30 +8,29 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-
         /* The alert message box */
         .alert {
-        padding: 20px;
-        background-color: rgb(56, 87, 117);
-        color: white;
-        margin-bottom: 15px;
+            padding: 20px;
+            background-color: rgb(56, 87, 117);
+            color: white;
+            margin-bottom: 15px;
         }
 
         /* The close button */
         .closebtn {
-        margin-left: 15px;
-        color: white;
-        font-weight: bold;
-        float: right;
-        font-size: 22px;
-        line-height: 20px;
-        cursor: pointer;
-        transition: 0.3s;
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
         /* When moving the mouse over the close button */
         .closebtn:hover {
-        color: black;
+            color: black;
         }
 
         .middle {
@@ -79,7 +78,7 @@
     <div class="middle padding background">
         <h1>Login</h1>
 
-        
+
 
         <form action="" method="post">
             <dl>
@@ -98,8 +97,8 @@
         <div class="alert">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
             <strong>Error:</strong> {{ error }}
-          </div>
-          {% endif %}
+        </div>
+        {% endif %}
     </div>
 </body>
 
