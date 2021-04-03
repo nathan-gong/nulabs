@@ -2,10 +2,10 @@
 
 CS3200 Database Design Final Project. _Northeastern University Spring 2021_
 
-<img src="static/homepage.jpg" width="200" height="150">
-<img src="static/student.jpg" width="200" height="150">
-<img src="static/pi.jpg" width="200" height="150">
-<img src="static/admin.jpg" width="200" height="150">
+<img src="https://github.com/nathan-gong/nulabs/app/static/homepage.jpg" width="200" height="150">
+<img src="https://github.com/nathan-gong/nulabs/app/static/student.jpg" width="200" height="150">
+<img src="https://github.com/nathan-gong/nulabs/app/static/pi.jpg" width="200" height="150">
+<img src="https://github.com/nathan-gong/nulabs/app/static/admin.jpg" width="200" height="150">
 
 ### Instructions
 
